@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/android/.cxx/RelWithDebInfo/51142b6n/arm64-v8a",
+  "command": "/Users/kris/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/kris/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DDART_SHARED_LIB -Djni_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -o CMakeFiles/jni.dir/dartjni.c.o -c /Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/dartjni.c",
+  "file": "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/dartjni.c"
+},
+{
+  "directory": "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/android/.cxx/RelWithDebInfo/51142b6n/arm64-v8a",
+  "command": "/Users/kris/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/kris/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DDART_SHARED_LIB -Djni_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -o CMakeFiles/jni.dir/third_party/global_jni_env.c.o -c /Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/third_party/global_jni_env.c",
+  "file": "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/third_party/global_jni_env.c"
+},
+{
+  "directory": "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/android/.cxx/RelWithDebInfo/51142b6n/arm64-v8a",
+  "command": "/Users/kris/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --sysroot=/Users/kris/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DDART_SHARED_LIB -Djni_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O2 -g -DNDEBUG -fPIC -o CMakeFiles/jni.dir/include/dart_api_dl.c.o -c /Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/include/dart_api_dl.c",
+  "file": "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/include/dart_api_dl.c"
+}
+]

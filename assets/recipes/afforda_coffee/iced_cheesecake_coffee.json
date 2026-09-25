@@ -1,0 +1,183 @@
+{
+  "id": "iced_cheesecake_coffee",
+  "title": "Iced Cheesecake Coffee",
+  "category": "Coffee",
+  "group": "Afforda Coffee",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "id": "espresso_shot",
+          "name": "Espresso Shot",
+          "amount": "7",
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "amount": "100",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "creamer",
+          "name": "Creamer",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "cheesecake_powder",
+          "name": "Cheesecake Powder",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "20",
+          "unit": "ml"
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lid",
+          "name": "Lid",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "thin_straw",
+          "name": "Thin straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    },
+    "22oz": {
+      "ingredients": [
+        {
+          "id": "espresso_shot",
+          "name": "Espresso Shot",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "amount": "200",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "creamer",
+          "name": "Creamer",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "id": "cheesecake_powder",
+          "name": "Cheesecake Powder",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "30",
+          "unit": "ml"
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lid",
+          "name": "Lid",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "thin_straw",
+          "name": "Thin straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    },
+    "1L": {
+      "ingredients": [
+        {
+          "id": "espresso_shot",
+          "name": "Espresso Shot",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "amount": "350",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "creamer",
+          "name": "Creamer",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "id": "cheesecake_powder",
+          "name": "Cheesecake Powder",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "50",
+          "unit": "ml"
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lid",
+          "name": "Lid",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "thin_straw",
+          "name": "Thin straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    }
+  },
+  "steps": []
+}

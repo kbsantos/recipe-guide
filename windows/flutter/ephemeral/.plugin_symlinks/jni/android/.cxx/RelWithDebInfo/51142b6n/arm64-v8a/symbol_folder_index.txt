@@ -1,0 +1,1 @@
+/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/arm64-v8a

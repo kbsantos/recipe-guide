@@ -1,0 +1,1 @@
+/Users/kris/Projects/BiggerBrew/bigger_brew_barista/build/jni/intermediates/cxx/RelWithDebInfo/5mo5v2xh/obj/armeabi-v7a

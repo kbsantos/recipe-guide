@@ -1,0 +1,25 @@
+# ninja log v5
+1	68	1787291751618134698	CMakeFiles/jni.dir/include/dart_api_dl.c.o	adee0312e7af0ac2
+0	80	1787291751629343080	CMakeFiles/jni.dir/dartjni.c.o	58f209440803addc
+1	129	1787291751676695260	CMakeFiles/jni.dir/third_party/global_jni_env.c.o	e42878d9db107270
+129	204	1787291751753001229	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+2	215	1787293689938760379	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+1	111	1787311501020733017	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+1	99	1787314180360594565	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+1	93	1787327451054827438	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+1	168	1787328033484979751	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	86	1787328752347036120	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	82	1787329534143626030	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+1	136	1787330551855136171	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	102	1787331483959078282	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	154	1787331798910874531	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	108	1787332205197524048	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	83	1787376536031964762	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+1	114	1787377293539517952	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	128	1787377923332338046	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	136	1787383723092472650	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+1	100	1787384508316908561	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	77	1787385405824832298	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	122	1787385881061803768	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+1	83	1787386827701099436	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006
+0	88	1787388637474412895	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/x86/libdartjni.so	1e489c975476006

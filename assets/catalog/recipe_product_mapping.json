@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "source": "Bigger_Brew_Recipe_Store_Mapping_Phase2B.xlsx",
+  "products": [
+    {
+      "productId": "biscoff_milktea",
+      "productName": "Biscoff Milktea",
+      "recipeId": "biscoff_milktea",
+      "recipePath": "signature_milktea/biscoff_milktea",
+      "recipeRef": "signature_milktea/biscoff_milktea"
+    },
+    {
+      "productId": "blueberry_fruitea",
+      "productName": "Blueberry Fruitea",
+      "recipeId": "blueberry_fruitea",
+      "recipePath": "fruitea/blueberry_fruitea",
+      "recipeRef": "fruitea/blueberry_fruitea"
+    },
+    {
+      "productId": "blueberry_slushies",
+      "productName": "Blueberry Slushies",
+      "recipeId": "blueberry_slushies",
+      "recipePath": "slushies/blueberry_slushies",
+      "recipeRef": "slushies/blueberry_slushies"
+    },
+    {
+      "productId": "blueberry_soda",
+      "productName": "Blueberry Soda",
+      "recipeId": "blueberry_soda",
+      "recipePath": "fruity_soda/blueberry_soda",
+      "recipeRef": "fruity_soda/blueberry_soda"
+    },
+    {
+      "productId": "brown_sugar_boba",
+      "productName": "Brown Sugar Boba",
+      "recipeId": "brown_sugar_boba",
+      "recipePath": "signature_milktea/brown_sugar_boba",
+      "recipeRef": "signature_milktea/brown_sugar_boba"
+    },
+    {
+      "productId": "caramel_coffee_frappe",
+      "productName": "Caramel Coffee Frappe",
+      "recipeId": "caramel_coffee_frappe",
+      "recipePath": "frappe/caramel_coffee_frappe",
+      "recipeRef": "frappe/caramel_coffee_frappe"
+    },
+    {
+      "productId": "cheesecake",
+      "productName": "Cheesecake",
+      "recipeId": "cheesecake",
+      "recipePath": "afforda_milktea/cheesecake",
+      "recipeRef": "afforda_milktea/cheesecake"
+    },
+    {
+      "productId": "choco_butternut_donut",
+      "productName": "Choco Butternut Donut",
+      "recipeId": "choco_butternut_donut",
+      "recipePath": "signature_milktea/choco_butternut_donut",
+      "recipeRef": "signature_milktea/choco_butternut_donut"
+    },
+    {
+      "productId": "choco_oreo_boba",
+      "productName": "Choco Oreo Boba",
+      "recipeId": "choco_oreo_boba",
+      "recipePath": "signature_milktea/choco_oreo_boba",
+      "recipeRef": "signature_milktea/choco_oreo_boba"
+    },
+    {
+      "productId": "chocolate",
+      "productName": "Chocolate",
+      "recipeId": "chocolate_milktea",
+      "recipePath": "afforda_milktea/chocolate",
+      "recipeRef": "afforda_milktea/chocolate"
+    },
+    {
+      "productId": "classic_milktea",
+      "productName": "Classic Milktea",
+      "recipeId": "classic_milktea",
+      "recipePath": "afforda_milktea/classic_milktea",
+      "recipeRef": "afforda_milktea/classic_milktea"
+    },
+    {
+      "productId": "coffee_jelly",
+      "productName": "Coffee Jelly",
+      "recipeId": "coffee_jelly",
+      "recipePath": "frappe/coffee_jelly",
+      "recipeRef": "frappe/coffee_jelly"
+    },
+    {
+      "productId": "cookie_crumble",
+      "productName": "Cookie Crumble",
+      "recipeId": "cookie_crumble",
+      "recipePath": "frappe/cookie_crumble",
+      "recipeRef": "frappe/cookie_crumble"
+    },
+    {
+      "productId": "cookies_cream",
+      "productName": "Cookies & Cream",
+      "recipeId": "cookies_cream",
+      "recipePath": "afforda_milktea/cookies_cream",
+      "recipeRef": "afforda_milktea/cookies_cream"
+    },
+    {
+      "productId": "cookies_cream_frappe",
+      "productName": "Cookies & Cream Frappe",
+      "recipeId": "cookies_cream_frappe",
+      "recipePath": "frappe/cookies_cream_frappe",
+      "recipeRef": "frappe/cookies_cream_frappe"
+    },
+    {
+      "productId": "dark_chocolate",
+      "productName": "Dark Chocolate",
+      "recipeId": "dark_chocolate",
+      "recipePath": "afforda_milktea/dark_chocolate",
+      "recipeRef": "afforda_milktea/dark_chocolate"
+    },
+    {
+      "productId": "dark_mocha_frappe",
+      "productName": "Dark Mocha Frappe",
+      "recipeId": "dark_mocha_frappe",
+      "recipePath": "frappe/dark_mocha_frappe",
+      "recipeRef": "frappe/dark_mocha_frappe"
+    },
+    {
+      "productId": "green_apple_fruitea",
+      "productName": "Green Apple Fruitea",
+      "recipeId": "green_apple_fruitea",
+      "recipePath": "fruitea/green_apple_fruitea",
+      "recipeRef": "fruitea/green_apple_fruitea"
+    },
+    {
+      "productId": "green_apple_slushies",
+      "productName": "Green Apple Slushies",
+      "recipeId": "green_apple_slushies",
+      "recipePath": "slushies/green_apple_slushies",
+      "recipeRef": "slushies/green_apple_slushies"
+    },
+    {
+      "productId": "green_apple_soda",
+      "productName": "Green Apple Soda",
+      "recipeId": "green_apple_soda",
+      "recipePath": "fruity_soda/green_apple_soda",
+      "recipeRef": "fruity_soda/green_apple_soda"
+    },
+    {
+      "productId": "hot_black_coffee",
+      "productName": "Hot Black Coffee",
+      "recipeId": "hot_black_coffee",
+      "recipePath": "hot_coffee/hot_black_coffee",
+      "recipeRef": "hot_coffee/hot_black_coffee"
+    },
+    {
+      "productId": "hot_caramel_macchiato",
+      "productName": "Hot Caramel Macchiato",
+      "recipeId": "hot_caramel_macchiato",
+      "recipePath": "hot_coffee/hot_caramel_macchiato",
+      "recipeRef": "hot_coffee/hot_caramel_macchiato"
+    },
+    {
+      "productId": "hot_chocolate",
+      "productName": "Chocolate",
+      "recipeId": "hot_chocolate",
+      "recipePath": "hot_coffee/chocolate",
+      "recipeRef": "hot_coffee/chocolate"
+    },
+    {
+      "productId": "hot_hazelnut_latte",
+      "productName": "Hot Hazelnut Latte",
+      "recipeId": "hot_hazelnut_latte",
+      "recipePath": "hot_coffee/hot_hazelnut_latte",
+      "recipeRef": "hot_coffee/hot_hazelnut_latte"
+    },
+    {
+      "productId": "hot_latte",
+      "productName": "Hot Latte",
+      "recipeId": "hot_latte",
+      "recipePath": "hot_coffee/hot_latte",
+      "recipeRef": "hot_coffee/hot_latte"
+    },
+    {
+      "productId": "hot_matcha",
+      "productName": "Hot Matcha",
+      "recipeId": "hot_matcha",
+      "recipePath": "hot_coffee/hot_matcha",
+      "recipeRef": "hot_coffee/hot_matcha"
+    },
+    {
+      "productId": "hot_spanish_latte",
+      "productName": "Hot Spanish Latte",
+      "recipeId": "hot_spanish_latte",
+      "recipePath": "hot_coffee/hot_spanish_latte",
+      "recipeRef": "hot_coffee/hot_spanish_latte"
+    },
+    {
+      "productId": "hot_vanilla_latte",
+      "productName": "Hot Vanilla Latte",
+      "recipeId": "hot_vanilla_latte",
+      "recipePath": "hot_coffee/hot_vanilla_latte",
+      "recipeRef": "hot_coffee/hot_vanilla_latte"
+    },
+    {
+      "productId": "iced_americano",
+      "productName": "Iced Americano",
+      "recipeId": "iced_americano",
+      "recipePath": "afforda_coffee/iced_americano",
+      "recipeRef": "afforda_coffee/iced_americano"
+    },
+    {
+      "productId": "iced_brown_sugar_latte",
+      "productName": "Iced Brown Sugar Latte",
+      "recipeId": "iced_brown_sugar_latte",
+      "recipePath": "signature_coffee/iced_brown_sugar_latte",
+      "recipeRef": "signature_coffee/iced_brown_sugar_latte"
+    },
+    {
+      "productId": "iced_butter_caramel",
+      "productName": "Iced Butter Caramel",
+      "recipeId": "iced_butter_caramel",
+      "recipePath": "signature_coffee/iced_butter_caramel",
+      "recipeRef": "signature_coffee/iced_butter_caramel"
+    },
+    {
+      "productId": "iced_caramel_macchiato",
+      "productName": "Iced Caramel Macchiato",
+      "recipeId": "iced_caramel_macchiato",
+      "recipePath": "signature_coffee/iced_caramel_macchiato",
+      "recipeRef": "signature_coffee/iced_caramel_macchiato"
+    },
+    {
+      "productId": "iced_cheesecake_coffee",
+      "productName": "Iced Cheesecake Coffee",
+      "recipeId": "iced_cheesecake_coffee",
+      "recipePath": "afforda_coffee/iced_cheesecake_coffee",
+      "recipeRef": "afforda_coffee/iced_cheesecake_coffee"
+    },
+    {
+      "productId": "iced_coffee_latte",
+      "productName": "Iced Coffee Latte",
+      "recipeId": "iced_coffee_latte",
+      "recipePath": "afforda_coffee/iced_coffee_latte",
+      "recipeRef": "afforda_coffee/iced_coffee_latte"
+    },
+    {
+      "productId": "iced_dark_chocolate_latte",
+      "productName": "Iced Dark Chocolate Latte",
+      "recipeId": "iced_dark_chocolate_latte",
+      "recipePath": "afforda_coffee/iced_dark_chocolate_latte",
+      "recipeRef": "afforda_coffee/iced_dark_chocolate_latte"
+    },
+    {
+      "productId": "iced_french_vanilla",
+      "productName": "Iced French Vanilla",
+      "recipeId": "iced_french_vanilla",
+      "recipePath": "signature_coffee/iced_french_vanilla",
+      "recipeRef": "signature_coffee/iced_french_vanilla"
+    },
+    {
+      "productId": "iced_hazelnut_mocha",
+      "productName": "Iced Hazelnut Mocha",
+      "recipeId": "iced_hazelnut_mocha",
+      "recipePath": "signature_coffee/iced_hazelnut_mocha",
+      "recipeRef": "signature_coffee/iced_hazelnut_mocha"
+    },
+    {
+      "productId": "iced_matcha_cream_puff",
+      "productName": "Iced Matcha Cream Puff",
+      "recipeId": "iced_matcha_cream_puff",
+      "recipePath": "signature_coffee/iced_matcha_cream_puff",
+      "recipeRef": "signature_coffee/iced_matcha_cream_puff"
+    },
+    {
+      "productId": "iced_matcha_latte",
+      "productName": "Iced Matcha Latte",
+      "recipeId": "iced_matcha_latte",
+      "recipePath": "afforda_coffee/iced_matcha_latte",
+      "recipeRef": "afforda_coffee/iced_matcha_latte"
+    },
+    {
+      "productId": "iced_peach_americano",
+      "productName": "Iced Peach Americano",
+      "recipeId": "iced_peach_americano",
+      "recipePath": "signature_coffee/iced_peach_americano",
+      "recipeRef": "signature_coffee/iced_peach_americano"
+    },
+    {
+      "productId": "iced_salted_caramel_latte",
+      "productName": "Iced Salted Caramel Latte",
+      "recipeId": "iced_salted_caramel_latte",
+      "recipePath": "afforda_coffee/iced_salted_caramel_latte",
+      "recipeRef": "afforda_coffee/iced_salted_caramel_latte"
+    },
+    {
+      "productId": "iced_spanish_latte",
+      "productName": "Iced Spanish Latte",
+      "recipeId": "iced_spanish_latte",
+      "recipePath": "afforda_coffee/iced_spanish_latte",
+      "recipeRef": "afforda_coffee/iced_spanish_latte"
+    },
+    {
+      "productId": "javachip",
+      "productName": "Javachip",
+      "recipeId": "javachip",
+      "recipePath": "afforda_milktea/javachip",
+      "recipeRef": "afforda_milktea/javachip"
+    },
+    {
+      "productId": "javachip_frappe",
+      "productName": "Javachip Frappe",
+      "recipeId": "javachip_frappe",
+      "recipePath": "frappe/javachip_frappe",
+      "recipeRef": "frappe/javachip_frappe"
+    },
+    {
+      "productId": "lychee_fruitea",
+      "productName": "Lychee Fruitea",
+      "recipeId": "lychee_fruitea",
+      "recipePath": "fruitea/lychee_fruitea",
+      "recipeRef": "fruitea/lychee_fruitea"
+    },
+    {
+      "productId": "lychee_slushies",
+      "productName": "Lychee Slushies",
+      "recipeId": "lychee_slushies",
+      "recipePath": "slushies/lychee_slushies",
+      "recipeRef": "slushies/lychee_slushies"
+    },
+    {
+      "productId": "lychee_soda",
+      "productName": "Lychee Soda",
+      "recipeId": "lychee_soda",
+      "recipePath": "fruity_soda/lychee_soda",
+      "recipeRef": "fruity_soda/lychee_soda"
+    },
+    {
+      "productId": "matcha",
+      "productName": "Matcha",
+      "recipeId": "matcha",
+      "recipePath": "afforda_milktea/matcha",
+      "recipeRef": "afforda_milktea/matcha"
+    },
+    {
+      "productId": "matcha_frappe",
+      "productName": "Matcha Frappe",
+      "recipeId": "matcha_frappe",
+      "recipePath": "frappe/matcha_frappe",
+      "recipeRef": "frappe/matcha_frappe"
+    },
+    {
+      "productId": "matcha_green_tea_boba",
+      "productName": "Matcha Green Tea Boba",
+      "recipeId": "matcha_green_tea_boba",
+      "recipePath": "signature_milktea/matcha_green_tea_boba",
+      "recipeRef": "signature_milktea/matcha_green_tea_boba"
+    },
+    {
+      "productId": "matcha_greentea",
+      "productName": "Matcha Greentea",
+      "recipeId": "matcha_greentea",
+      "recipePath": "matcha_series/matcha_greentea",
+      "recipeRef": "matcha_series/matcha_greentea"
+    },
+    {
+      "productId": "matcha_oreo_frappe",
+      "productName": "Matcha Oreo Frappe",
+      "recipeId": "matcha_oreo_frappe",
+      "recipePath": "matcha_series/matcha_oreo_frappe",
+      "recipeRef": "matcha_series/matcha_oreo_frappe"
+    },
+    {
+      "productId": "matcha_pistachio",
+      "productName": "Matcha Pistachio",
+      "recipeId": "matcha_pistachio",
+      "recipePath": "matcha_series/matcha_pistachio",
+      "recipeRef": "matcha_series/matcha_pistachio"
+    },
+    {
+      "productId": "matcha_pure_frappe",
+      "productName": "Matcha Pure Frappe",
+      "recipeId": "matcha_pure_frappe",
+      "recipePath": "matcha_series/matcha_pure_frappe",
+      "recipeRef": "matcha_series/matcha_pure_frappe"
+    },
+    {
+      "productId": "matcha_strawberry",
+      "productName": "Matcha Strawberry",
+      "recipeId": "matcha_strawberry",
+      "recipePath": "matcha_series/matcha_strawberry",
+      "recipeRef": "matcha_series/matcha_strawberry"
+    },
+    {
+      "productId": "milo_boba",
+      "productName": "Milo Boba",
+      "recipeId": "milo_boba",
+      "recipePath": "signature_milktea/milo_boba",
+      "recipeRef": "signature_milktea/milo_boba"
+    },
+    {
+      "productId": "okinawa",
+      "productName": "Okinawa",
+      "recipeId": "okinawa",
+      "recipePath": "afforda_milktea/okinawa",
+      "recipeRef": "afforda_milktea/okinawa"
+    },
+    {
+      "productId": "salted_caramel",
+      "productName": "Salted Caramel",
+      "recipeId": "salted_caramel",
+      "recipePath": "afforda_milktea/salted_caramel",
+      "recipeRef": "afforda_milktea/salted_caramel"
+    },
+    {
+      "productId": "strawberry",
+      "productName": "Strawberry",
+      "recipeId": "strawberry",
+      "recipePath": "afforda_milktea/strawberry",
+      "recipeRef": "afforda_milktea/strawberry"
+    },
+    {
+      "productId": "strawberry_frappe",
+      "productName": "Strawberry Frappe",
+      "recipeId": "strawberry_frappe",
+      "recipePath": "frappe/strawberry_frappe",
+      "recipeRef": "frappe/strawberry_frappe"
+    },
+    {
+      "productId": "strawberry_fruitea",
+      "productName": "Strawberry Fruitea",
+      "recipeId": "strawberry_fruitea",
+      "recipePath": "fruitea/strawberry_fruitea",
+      "recipeRef": "fruitea/strawberry_fruitea"
+    },
+    {
+      "productId": "strawberry_slushies",
+      "productName": "Strawberry Slushies",
+      "recipeId": "strawberry_slushies",
+      "recipePath": "slushies/strawberry_slushies",
+      "recipeRef": "slushies/strawberry_slushies"
+    },
+    {
+      "productId": "strawberry_soda",
+      "productName": "Strawberry Soda",
+      "recipeId": "strawberry_soda",
+      "recipePath": "fruity_soda/strawberry_soda",
+      "recipeRef": "fruity_soda/strawberry_soda"
+    },
+    {
+      "productId": "taro",
+      "productName": "Taro",
+      "recipeId": "taro",
+      "recipePath": "afforda_milktea/taro",
+      "recipeRef": "afforda_milktea/taro"
+    },
+    {
+      "productId": "wintermelon",
+      "productName": "Wintermelon",
+      "recipeId": "wintermelon",
+      "recipePath": "afforda_milktea/wintermelon",
+      "recipeRef": "afforda_milktea/wintermelon"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "id": "dark_chocolate",
+  "title": "Dark Chocolate",
+  "category": "Milk Tea",
+  "group": "Afforda Milktea",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "name": "Assam Tea",
+          "amount": "100",
+          "unit": "ml"
+        },
+        {
+          "name": "Creamer",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "name": "Fructose",
+          "amount": "20",
+          "unit": "ml"
+        },
+        {
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "name": "Dark Chocolate Powder",
+          "amount": "5",
+          "unit": "g"
+        }
+      ]
+    },
+    "22oz": {
+      "ingredients": [
+        {
+          "name": "Assam Tea",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "name": "Creamer",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "name": "Fructose",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "name": "Dark Chocolate Powder",
+          "amount": "10",
+          "unit": "g"
+        }
+      ]
+    },
+    "1L": {
+      "ingredients": [
+        {
+          "name": "Assam Tea",
+          "amount": "350",
+          "unit": "ml"
+        },
+        {
+          "name": "Creamer",
+          "amount": "30",
+          "unit": "g"
+        },
+        {
+          "name": "Fructose",
+          "amount": "60",
+          "unit": "ml"
+        },
+        {
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "name": "Dark Chocolate Powder",
+          "amount": "25",
+          "unit": "g"
+        }
+      ]
+    }
+  },
+  "steps": [
+    "Brew Assam Tea",
+    "Add Creamer",
+    "Add Fructose",
+    "Add Dark Chocolate Powder",
+    "Add Ice",
+    "Shake 10 times",
+    "Serve"
+  ]
+}

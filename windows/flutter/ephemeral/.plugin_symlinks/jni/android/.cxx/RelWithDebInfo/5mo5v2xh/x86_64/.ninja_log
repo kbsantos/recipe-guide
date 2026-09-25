@@ -1,0 +1,9 @@
+# ninja log v5
+0	98	1786471132508181076	CMakeFiles/jni.dir/include/dart_api_dl.c.o	9def9a2696a83b7e
+0	129	1786471132539416751	CMakeFiles/jni.dir/dartjni.c.o	d12f88139bf449f3
+0	418	1786471132825449076	CMakeFiles/jni.dir/third_party/global_jni_env.c.o	4a9d99153c321115
+418	489	1786471132899496587	/Users/kris/Projects/BiggerBrew/bigger_brew_barista/build/jni/intermediates/cxx/RelWithDebInfo/5mo5v2xh/obj/x86_64/libdartjni.so	9c36b9f6d779fb7a
+0	69	1786520273963743357	/Users/kris/Projects/BiggerBrew/bigger_brew_barista/build/jni/intermediates/cxx/RelWithDebInfo/5mo5v2xh/obj/x86_64/libdartjni.so	9c36b9f6d779fb7a
+0	64	1786520595604308963	/Users/kris/Projects/BiggerBrew/bigger_brew_barista/build/jni/intermediates/cxx/RelWithDebInfo/5mo5v2xh/obj/x86_64/libdartjni.so	9c36b9f6d779fb7a
+0	75	1786523618835157029	/Users/kris/Projects/BiggerBrew/bigger_brew_barista/build/jni/intermediates/cxx/RelWithDebInfo/5mo5v2xh/obj/x86_64/libdartjni.so	9c36b9f6d779fb7a
+0	65	1786527003316133917	/Users/kris/Projects/BiggerBrew/bigger_brew_barista/build/jni/intermediates/cxx/RelWithDebInfo/5mo5v2xh/obj/x86_64/libdartjni.so	9c36b9f6d779fb7a

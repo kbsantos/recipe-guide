@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/kris/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/android/.cxx/RelWithDebInfo/51142b6n/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/kris/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/android/.cxx/RelWithDebInfo/51142b6n/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "jni::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86_64",
+      "artifactName": "jni",
+      "output": "/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/kris/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/kris/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

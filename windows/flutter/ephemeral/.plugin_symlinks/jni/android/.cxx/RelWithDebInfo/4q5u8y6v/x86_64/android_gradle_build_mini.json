@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/kris/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/android/.cxx/RelWithDebInfo/4q5u8y6v/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/kris/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/android/.cxx/RelWithDebInfo/4q5u8y6v/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "jni::@6890427a1f51a3e7e1df": {
+      "artifactName": "jni",
+      "abi": "x86_64",
+      "output": "/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86_64/libdartjni.so",
+      "runtimeFiles": []
+    }
+  }
+}

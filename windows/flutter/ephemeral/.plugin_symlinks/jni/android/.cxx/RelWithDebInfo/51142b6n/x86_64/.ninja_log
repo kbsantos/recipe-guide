@@ -1,0 +1,13 @@
+# ninja log v5
+0	94	1789491565912951334	CMakeFiles/jni.dir/include/dart_api_dl.c.o	9def9a2696a83b7e
+0	114	1789491565933083372	CMakeFiles/jni.dir/dartjni.c.o	d12f88139bf449f3
+0	418	1789491566234569972	CMakeFiles/jni.dir/third_party/global_jni_env.c.o	4a9d99153c321115
+418	490	1789491566308647171	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815
+2	96	1789640718240900791	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815
+2	63	1789671468727217478	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815
+1	161	1789674867939724680	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815
+1	57	1789678078269220328	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815
+0	60	1789678466673508504	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815
+2	118	1789764833007115189	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815
+0	96	1789765245348834924	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815
+2	64	1789913274832194869	/Users/kris/Projects/github/kiosk/build/jni/intermediates/cxx/RelWithDebInfo/51142b6n/obj/x86_64/libdartjni.so	3b9de8aff746a815

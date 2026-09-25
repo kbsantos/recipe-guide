@@ -1,0 +1,165 @@
+{
+  "id": "blueberry_soda",
+  "title": "Blueberry Soda",
+  "category": "Fruity Soda",
+  "group": "Fruity Soda",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "id": "sprite",
+          "name": "Sprite",
+          "amount": "Solo",
+          "unit": ""
+        },
+        {
+          "id": "blueberry_syrup",
+          "name": "Blueberry Syrup",
+          "amount": "20",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "10",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "whipcream",
+          "name": "Whipcream",
+          "amount": "Fill",
+          "unit": ""
+        },
+        {
+          "id": "dome",
+          "name": "Dome",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "thin_straw",
+          "name": "Thin Straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    },
+    "22oz": {
+      "ingredients": [
+        {
+          "id": "sprite",
+          "name": "Sprite",
+          "amount": "Mismo",
+          "unit": ""
+        },
+        {
+          "id": "blueberry_syrup",
+          "name": "Blueberry Syrup",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "whipcream",
+          "name": "Whipcream",
+          "amount": "Fill",
+          "unit": ""
+        },
+        {
+          "id": "dome",
+          "name": "Dome",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "thin_straw",
+          "name": "Thin Straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    },
+    "1L": {
+      "ingredients": [
+        {
+          "id": "sprite",
+          "name": "Sprite",
+          "amount": "Mismo",
+          "unit": ""
+        },
+        {
+          "id": "blueberry_syrup",
+          "name": "Blueberry Syrup",
+          "amount": "30",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "30",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "whipcream",
+          "name": "Whipcream",
+          "amount": "Fill",
+          "unit": ""
+        },
+        {
+          "id": "dome",
+          "name": "Dome",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "thin_straw",
+          "name": "Thin Straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    }
+  },
+  "steps": []
+}

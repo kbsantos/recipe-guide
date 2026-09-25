@@ -1,0 +1,37 @@
+{
+  "id": "hot_black_coffee",
+  "title": "Hot Black Coffee",
+  "category": "Coffee",
+  "group": "Hot Coffee",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "id": "espresso_shot",
+          "name": "Espresso Shot",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "hot_water",
+          "name": "Hot Water",
+          "amount": "280",
+          "unit": "ml"
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lid",
+          "name": "Lid",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    }
+  },
+  "steps": []
+}

@@ -1,0 +1,1 @@
+/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/Debug/2j6f574t/obj/arm64-v8a

@@ -1,0 +1,165 @@
+{
+  "id": "lychee_fruitea",
+  "title": "Lychee Fruitea",
+  "category": "Fruit Tea",
+  "group": "Fruitea",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "id": "jasmine_tea",
+          "name": "Jasmine Tea",
+          "amount": "80",
+          "unit": "ml"
+        },
+        {
+          "id": "lychee_syrup",
+          "name": "Lychee Syrup",
+          "amount": "20",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "10",
+          "unit": "ml"
+        },
+        {
+          "id": "nata",
+          "name": "Nata",
+          "amount": "5",
+          "unit": "g"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lid",
+          "name": "Lid",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "boba_straw",
+          "name": "Boba Straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    },
+    "22oz": {
+      "ingredients": [
+        {
+          "id": "jasmine_tea",
+          "name": "Jasmine Tea",
+          "amount": "200",
+          "unit": "ml"
+        },
+        {
+          "id": "lychee_syrup",
+          "name": "Lychee Syrup",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "20",
+          "unit": "ml"
+        },
+        {
+          "id": "nata",
+          "name": "Nata",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lid",
+          "name": "Lid",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "boba_straw",
+          "name": "Boba Straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    },
+    "1L": {
+      "ingredients": [
+        {
+          "id": "jasmine_tea",
+          "name": "Jasmine Tea",
+          "amount": "350",
+          "unit": "ml"
+        },
+        {
+          "id": "lychee_syrup",
+          "name": "Lychee Syrup",
+          "amount": "30",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "id": "nata",
+          "name": "Nata",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lid",
+          "name": "Lid",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "boba_straw",
+          "name": "Boba Straw",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    }
+  },
+  "steps": []
+}

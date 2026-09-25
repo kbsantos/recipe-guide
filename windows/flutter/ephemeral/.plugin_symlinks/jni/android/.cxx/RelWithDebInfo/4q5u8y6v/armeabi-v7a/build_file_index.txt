@@ -1,0 +1,1 @@
+/Users/kris/.pub-cache/hosted/pub.dev/jni-1.0.3/src/CMakeLists.txt

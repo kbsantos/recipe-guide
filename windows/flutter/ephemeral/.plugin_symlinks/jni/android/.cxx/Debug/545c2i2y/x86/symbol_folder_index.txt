@@ -1,0 +1,1 @@
+/Users/kris/Projects/BiggerBrew/bigger_brew_barista/build/jni/intermediates/cxx/Debug/545c2i2y/obj/x86

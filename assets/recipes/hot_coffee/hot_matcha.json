@@ -1,0 +1,49 @@
+{
+  "id": "hot_matcha",
+  "title": "Hot Matcha",
+  "category": "Coffee",
+  "group": "Hot Coffee",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "id": "matcha_powder",
+          "name": "Matcha Powder",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "id": "hot_water",
+          "name": "Hot Water",
+          "amount": "280",
+          "unit": "ml"
+        },
+        {
+          "id": "creamer",
+          "name": "Creamer",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lids",
+          "name": "Lids",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    }
+  },
+  "steps": []
+}

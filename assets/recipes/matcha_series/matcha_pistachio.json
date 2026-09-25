@@ -1,0 +1,129 @@
+{
+  "id": "matcha_pistachio",
+  "title": "Matcha Pistachio",
+  "category": "Matcha",
+  "group": "Matcha Series",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "id": "matcha_powder",
+          "name": "Matcha Powder",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "full_cream_milk",
+          "name": "Full Cream Milk",
+          "amount": "80",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "id": "water_hot",
+          "name": "Water (Hot)",
+          "amount": "50",
+          "unit": "ml"
+        },
+        {
+          "id": "pistachio_syrup",
+          "name": "Pistachio Syrup",
+          "amount": "10",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        }
+      ]
+    },
+    "22oz": {
+      "ingredients": [
+        {
+          "id": "matcha_powder",
+          "name": "Matcha Powder",
+          "amount": "15",
+          "unit": "g"
+        },
+        {
+          "id": "full_cream_milk",
+          "name": "Full Cream Milk",
+          "amount": "120",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "30",
+          "unit": "ml"
+        },
+        {
+          "id": "water_hot",
+          "name": "Water (Hot)",
+          "amount": "50",
+          "unit": "ml"
+        },
+        {
+          "id": "pistachio_syrup",
+          "name": "Pistachio Syrup",
+          "amount": "15",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        }
+      ]
+    },
+    "1L": {
+      "ingredients": [
+        {
+          "id": "matcha_powder",
+          "name": "Matcha Powder",
+          "amount": "25",
+          "unit": "g"
+        },
+        {
+          "id": "full_cream_milk",
+          "name": "Full Cream Milk",
+          "amount": "150",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "50",
+          "unit": "ml"
+        },
+        {
+          "id": "water_hot",
+          "name": "Water (Hot)",
+          "amount": "80",
+          "unit": "ml"
+        },
+        {
+          "id": "pistachio_syrup",
+          "name": "Pistachio Syrup",
+          "amount": "30",
+          "unit": "ml"
+        },
+        {
+          "id": "ice",
+          "name": "Ice",
+          "amount": "Full",
+          "unit": ""
+        }
+      ]
+    }
+  },
+  "steps": []
+}

@@ -1,0 +1,27 @@
+# ninja log v5
+1	75	1787287270298689421	CMakeFiles/jni.dir/include/dart_api_dl.c.o	5a09e08fda4142fa
+0	101	1787287270323916980	CMakeFiles/jni.dir/dartjni.c.o	91669a8a4da603ee
+0	401	1787287270621157689	CMakeFiles/jni.dir/third_party/global_jni_env.c.o	2817f7d513074af8
+401	465	1787287270687940772	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+2	70	1787289572367801619	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+1	71	1787372095325386372	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	52	1787376209489535137	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	48	1787384427729294747	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+1	51	1787390460776177230	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+1	48	1787397077020860824	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	48	1787399700301113938	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	47	1787403701288020047	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	50	1787412084116637799	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	49	1787418438832402733	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	49	1787472575961792063	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+1	57	1787489322602615595	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+1	50	1787576620742174182	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	48	1787577463143522885	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+2	50	1787660419094678544	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+1	51	1787748667026276079	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+1	78	1787828856568671484	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	50	1787830591161635329	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	47	1787831752449524798	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+3	69	1787832869908870677	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+1	53	1787913848897506888	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5
+0	48	1788082071755383370	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86/libdartjni.so	a2200bf4f1787bd5

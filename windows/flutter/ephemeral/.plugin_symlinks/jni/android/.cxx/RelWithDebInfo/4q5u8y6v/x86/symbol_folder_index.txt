@@ -1,0 +1,1 @@
+/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/x86

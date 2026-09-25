@@ -1,0 +1,49 @@
+{
+  "id": "hot_vanilla_latte",
+  "title": "Hot Vanilla Latte",
+  "category": "Coffee",
+  "group": "Hot Coffee",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "id": "espresso_shot",
+          "name": "Espresso Shot",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "hot_water",
+          "name": "Hot Water",
+          "amount": "280",
+          "unit": "ml"
+        },
+        {
+          "id": "creamer",
+          "name": "Creamer",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "id": "vanilla_syrup",
+          "name": "Vanilla Syrup",
+          "amount": "10",
+          "unit": "ml"
+        },
+        {
+          "id": "fructose",
+          "name": "Fructose",
+          "amount": "25",
+          "unit": "ml"
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    }
+  },
+  "steps": []
+}

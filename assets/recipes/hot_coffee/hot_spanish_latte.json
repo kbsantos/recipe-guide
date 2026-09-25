@@ -1,0 +1,49 @@
+{
+  "id": "hot_spanish_latte",
+  "title": "Hot Spanish Latte",
+  "category": "Coffee",
+  "group": "Hot Coffee",
+  "sizes": {
+    "12oz": {
+      "ingredients": [
+        {
+          "id": "espresso_shot",
+          "name": "Espresso Shot",
+          "amount": "10",
+          "unit": "g"
+        },
+        {
+          "id": "hot_water",
+          "name": "Hot Water",
+          "amount": "280",
+          "unit": "ml"
+        },
+        {
+          "id": "creamer",
+          "name": "Creamer",
+          "amount": "20",
+          "unit": "g"
+        },
+        {
+          "id": "condensed",
+          "name": "Condensed",
+          "amount": "40",
+          "unit": "ml"
+        },
+        {
+          "id": "cups",
+          "name": "Cups",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "id": "lids",
+          "name": "Lids",
+          "amount": "1",
+          "unit": ""
+        }
+      ]
+    }
+  },
+  "steps": []
+}

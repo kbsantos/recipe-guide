@@ -1,0 +1,27 @@
+# ninja log v5
+1	118	1787287268881330030	CMakeFiles/jni.dir/include/dart_api_dl.c.o	4c85d7de6215ab8
+0	138	1787287268900978593	CMakeFiles/jni.dir/dartjni.c.o	4d879cf70693fe26
+1	444	1787287269204448185	CMakeFiles/jni.dir/third_party/global_jni_env.c.o	37513e398b1b3f93
+444	538	1787287269301028577	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+6	322	1787289572184856779	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+7	283	1787372095128502801	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+0	295	1787376209349632519	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+0	209	1787384427599942517	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+0	224	1787390460643010520	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+1	248	1787397076891828078	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+0	234	1787399700161683904	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+0	241	1787403701161265882	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+1	246	1787412083985628577	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+0	276	1787418438700335249	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+1	281	1787472575817350118	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+8	342	1787489322437790827	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+1	317	1787576620596227792	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+0	259	1787577463009011873	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+11	282	1787660418947183243	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+9	319	1787748666884085797	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+0	272	1787828856404961422	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+10	234	1787830591024712506	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+1	279	1787831752311743394	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+2	240	1787832869747008760	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+6	318	1787913848752472425	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
+9	332	1788082071618040303	/Users/kris/Projects/BiggerBrew/bigger_brew_kiosk/build/jni/intermediates/cxx/RelWithDebInfo/4q5u8y6v/obj/arm64-v8a/libdartjni.so	86f5283ca9432e3d
