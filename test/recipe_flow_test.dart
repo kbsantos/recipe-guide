@@ -2,9 +2,11 @@
 
 // import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
+import 'test_recipe_catalog.dart';
 
 import 'package:bigger_brew_barista/app.dart';
+import 'package:bigger_brew_barista/features/home/home_page.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +23,7 @@ void main() {
     //
     // ----------------------------------------------------------
 
-    SharedPreferences.setMockInitialValues({});
+    await seedRecipeCatalogForTest();
   });
 
   testWidgets(
@@ -36,7 +38,9 @@ void main() {
       // START APP
       // ----------------------------------------------------------
 
-      await tester.pumpWidget(const BiggerBrewApp());
+      await tester.pumpWidget(
+        const BiggerBrewApp(homeOverride: HomePage()),
+      );
 
       // Allow the initial frame to render.
       await tester.pump();
@@ -49,88 +53,23 @@ void main() {
       // INITIAL SCREEN
       // ----------------------------------------------------------
 
-      final milkTeaInitial = find.text('Milk Tea');
-
-      print(
-        'Milk Tea widgets: '
-        '${milkTeaInitial.evaluate().length}',
-      );
-
-      expect(
-        milkTeaInitial,
-        findsAtLeastNWidgets(1),
-        reason: 'Milk Tea menu category should be visible.',
-      );
-
-      // ----------------------------------------------------------
-      // OPEN MILK TEA
-      // ----------------------------------------------------------
-
-      await tester.tap(milkTeaInitial.first);
-
-      await tester.pumpAndSettle(const Duration(seconds: 2));
-
-      print('');
-      print('AFTER TAPPING MILK TEA');
-      print('==============================================');
-
-      final affordaMilktea = find.text('Afforda Milktea');
-
-      final twelveDrinks = find.text('12 Drinks');
-
+      // Product view is now the only menu view.
       final darkChocolateBefore = find.text('Dark Chocolate');
-
-      print(
-        'Afforda Milktea widgets: '
-        '${affordaMilktea.evaluate().length}',
-      );
-
-      print(
-        '12 Drinks widgets: '
-        '${twelveDrinks.evaluate().length}',
-      );
-
-      print(
-        'Dark Chocolate widgets: '
-        '${darkChocolateBefore.evaluate().length}',
-      );
+      for (var i = 0; i < 20 && darkChocolateBefore.evaluate().isEmpty; i++) {
+        await tester.pump(const Duration(milliseconds: 100));
+      }
 
       expect(
-        affordaMilktea,
+        darkChocolateBefore,
         findsAtLeastNWidgets(1),
-        reason: 'Afforda Milktea group should be visible.',
-      );
-
-      // ----------------------------------------------------------
-      // OPEN AFFORDA MILKTEA
-      // ----------------------------------------------------------
-
-      await tester.tap(affordaMilktea.first);
-
-      await tester.pumpAndSettle(const Duration(seconds: 2));
-
-      print('');
-      print('AFTER OPENING AFFORDA MILKTEA');
-      print('==============================================');
-
-      final darkChocolate = find.text('Dark Chocolate');
-
-      print(
-        'Dark Chocolate widgets: '
-        '${darkChocolate.evaluate().length}',
-      );
-
-      expect(
-        darkChocolate,
-        findsAtLeastNWidgets(1),
-        reason: 'Dark Chocolate drink should be visible.',
+        reason: 'Dark Chocolate product should be visible in the product list.',
       );
 
       // ----------------------------------------------------------
       // OPEN DARK CHOCOLATE RECIPE
       // ----------------------------------------------------------
 
-      await tester.tap(darkChocolate.first);
+      await tester.tap(darkChocolateBefore.first);
 
       // Render the first frame after navigation.
       await tester.pump();

@@ -1,12 +1,13 @@
 import 'package:bigger_brew_barista/services/search_service.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
+import 'test_recipe_catalog.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  setUp(() {
-    SharedPreferences.setMockInitialValues({});
+  setUp(() async {
+    await seedRecipeCatalogForTest();
   });
 
   late SearchService searchService;

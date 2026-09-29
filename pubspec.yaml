@@ -17,12 +17,11 @@ dependencies:
   # Local recipe persistence
   shared_preferences: ^2.5.3
 
-  # Recipe backup / export
-  file_saver: ^0.4.0
-
-  # Recipe backup / import
-  file_picker: 10.3.8
   wakelock_plus: ^1.2.8
+
+  # Store Management recipe sync
+  supabase_flutter: ^2.10.0
+  flutter_dotenv: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -34,16 +33,5 @@ flutter:
   uses-material-design: true
 
   assets:
+    - .env
     - assets/images/
-    - assets/catalog/
-
-    - assets/recipes/afforda_coffee/
-    - assets/recipes/afforda_milktea/
-    - assets/recipes/frappe/
-    - assets/recipes/fruitea/
-    - assets/recipes/fruity_soda/
-    - assets/recipes/hot_coffee/
-    - assets/recipes/matcha_series/
-    - assets/recipes/signature_coffee/
-    - assets/recipes/signature_milktea/
-    - assets/recipes/slushies/

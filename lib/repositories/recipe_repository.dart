@@ -1,76 +1,74 @@
-import 'package:shared_preferences/shared_preferences.dart';
 
-import '../core/utils/json_loader.dart';
 import '../models/recipe.dart';
-import '../services/local_recipe_storage.dart';
-import '../services/recipe_storage.dart';
+import '../services/local_recipe_cache.dart';
 
 class RecipeRepository {
   RecipeRepository._();
 
-  static RecipeStorage? _storage;
-
-  static Future<RecipeStorage> _getStorage() async {
-    if (_storage != null) {
-      return _storage!;
+  static Future<Recipe> loadRecipe(String recipeRef) async {
+    final cached = await const LocalRecipeCache().read();
+    final remote = _findRemoteRecipe(cached, recipeRef);
+    if (remote != null) {
+      return Recipe.fromJson(_remoteToRecipeJson(remote));
     }
 
-    final preferences = await SharedPreferences.getInstance();
-
-    _storage = LocalRecipeStorage(preferences);
-
-    return _storage!;
-  }
-
-  /// Loads a recipe.
-  ///
-  /// A locally edited recipe takes priority
-  /// over the bundled JSON asset.
-  static Future<Recipe> loadRecipe(String recipePath) async {
-    final storage = await _getStorage();
-
-    final localRecipe = await storage.load(recipePath);
-
-    if (localRecipe != null) {
-      return localRecipe;
-    }
-
-    final Map<String, dynamic> json = await JsonLoader.load(
-      'assets/recipes/$recipePath.json',
+    throw StateError(
+      'Recipe "$recipeRef" is not available from Store Management. Sync the Recipe Guide first.',
     );
-
-    return Recipe.fromJson(json);
   }
 
-  /// Saves a local recipe override.
-  static Future<void> saveRecipe(String recipePath, Recipe recipe) async {
-    final storage = await _getStorage();
-
-    await storage.save(recipePath, recipe);
+  static Map<String, dynamic>? _findRemoteRecipe(
+    Map<String, dynamic>? payload,
+    String recipeRef,
+  ) {
+    final recipes = payload?['recipes'];
+    if (recipes is! List) return null;
+    for (final raw in recipes) {
+      if (raw is Map && raw['id']?.toString() == recipeRef) {
+        return Map<String, dynamic>.from(raw);
+      }
+    }
+    return null;
   }
 
-  /// Removes the local override.
-  ///
-  /// The next load will return the original
-  /// bundled JSON recipe.
-  static Future<void> resetRecipe(String recipePath) async {
-    final storage = await _getStorage();
+  static Map<String, dynamic> _remoteToRecipeJson(Map<String, dynamic> remote) {
+    final sizes = <String, dynamic>{};
+    final rawSizes = remote['sizes'];
+    if (rawSizes is List) {
+      for (final raw in rawSizes) {
+        if (raw is! Map) continue;
+        final size = raw['size']?.toString() ?? raw['sizeId']?.toString() ?? '';
+        if (size.isEmpty) continue;
+        final ingredients = raw['ingredients'] is List
+            ? (raw['ingredients'] as List).map((e) => Map<String, dynamic>.from(e as Map)).toList()
+            : <Map<String, dynamic>>[];
+        sizes[size] = {
+          'ingredients': ingredients.map((item) => {
+            'id': item['id']?.toString() ?? '',
+            'name': item['name']?.toString() ?? '',
+            'amount': item['amount']?.toString() ?? '',
+            'unit': item['unit']?.toString() ?? '',
+          }).toList(),
+          'steps': raw['steps'] is List
+              ? (raw['steps'] as List).map((e) => e.toString()).toList()
+              : <String>[],
+        };
+      }
+    }
 
-    await storage.delete(recipePath);
-  }
+    final firstSteps = sizes.values
+        .whereType<Map>()
+        .map((e) => e['steps'])
+        .whereType<List>()
+        .firstWhere((e) => e.isNotEmpty, orElse: () => const []);
 
-  /// Returns true when a recipe has a local
-  /// edited version.
-  static Future<bool> hasLocalOverride(String recipePath) async {
-    final storage = await _getStorage();
-
-    return storage.exists(recipePath);
-  }
-
-  /// Removes all local recipe overrides.
-  static Future<void> clearLocalRecipes() async {
-    final storage = await _getStorage();
-
-    await storage.clear();
+    return {
+      'id': remote['id']?.toString() ?? '',
+      'title': remote['title']?.toString() ?? '',
+      'category': remote['categoryId']?.toString() ?? '',
+      'group': remote['group']?.toString() ?? '',
+      'sizes': sizes,
+      'steps': firstSteps,
+    };
   }
 }

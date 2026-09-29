@@ -1,35 +1,45 @@
-# bigger_brew_barista
+# Bigger Brew Barista Recipe Guide
 
-A new Flutter project.
+## Architecture
 
-## Getting Started
+The Recipe Guide is a **read-only consumer** of Store Management recipe data.
 
-This project is a starting point for a Flutter application.
+- **Store Management is the single source of truth** for recipes.
+- Store owns recipe ingredients, inventory mapping, sizes, and preparation steps.
+- Recipe Guide syncs the published Store payload and keeps a local cache for offline reading.
+- Recipe Guide does not edit, import, export, or locally override recipes.
 
-A few resources to get you started if this is your first Flutter project:
+### Data flow
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+`Store Management -> Supabase -> get_recipe_guide_catalog() -> Recipe Guide sync -> local cache -> Barista UI`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Supabase configuration
 
-## Product Catalog → Recipe Guide Adapter
+Copy `.env.example` to `.env` and provide:
 
-The Recipe Guide now includes a neutral product-to-recipe mapping at
-`assets/catalog/recipe_product_mapping.json` and the
-`ProductRecipeAdapter` in `lib/adapters/product_recipe_adapter.dart`.
+```text
+SUPABASE_URL=...
+SUPABASE_PUBLISHABLE_KEY=...
+```
 
-The adapter uses the stable Product Catalog `productId` to resolve a local
-Recipe Guide recipe path. It does not import Kiosk code and does not make the
-Kiosk depend on `RecipeRepository`.
+The signed-in user must have a Store Management `store_id` in Supabase `app_metadata`.
 
-The two Chocolate products are explicitly disambiguated:
+## Store migration
 
-- `chocolate` → `chocolate_milktea`
-- `hot_chocolate` → `hot_chocolate`
+Apply:
 
-The adapter regression tests cover all 65 catalog drink mappings and verify
-that every mapped recipe loads successfully.
+`supabase/20260930_recipe_guide_sync.sql`
+
+This migration:
+
+- upgrades product recipe rows to size-aware storage when needed;
+- adds qualitative `quantity_text` support;
+- adds preparation steps per product/size;
+- provides the Store recipe management read/write functions;
+- provides `get_recipe_guide_catalog()` for the read-only Recipe Guide.
+
+## Offline behavior
+
+After a successful sync, the latest Store payload is cached locally. If the Store endpoint is temporarily unavailable, the Recipe Guide opens from that cache.
+
+A new installation without a successful first sync cannot display recipes because there is no bundled recipe source.

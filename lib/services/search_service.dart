@@ -1,6 +1,6 @@
+import 'package:bigger_brew_barista/models/menu_item.dart';
 import 'package:bigger_brew_barista/models/search_result.dart';
-import 'package:bigger_brew_barista/repositories/menu_repository.dart';
-import 'package:bigger_brew_barista/repositories/recipe_repository.dart';
+import 'package:bigger_brew_barista/services/local_recipe_cache.dart';
 import 'package:flutter/foundation.dart';
 
 class SearchService {
@@ -20,117 +20,95 @@ class SearchService {
         .toList(growable: false);
   }
 
-  // ==========================================================
-  // MATCHING
-  // ==========================================================
-
   bool _matches(SearchResult result, String query) {
-    // Drink name
     if (result.item.title.toLowerCase().contains(query)) {
       return true;
     }
 
-    // Category
     if (result.category.toLowerCase().contains(query)) {
       return true;
     }
 
-    // Group
     if (result.group.toLowerCase().contains(query)) {
       return true;
     }
 
-    // Ingredients
     return result.ingredientNames.any(
       (ingredient) => ingredient.toLowerCase().contains(query),
     );
   }
 
-  // ==========================================================
-  // BUILD SEARCH INDEX
-  // ==========================================================
-
+  /// Builds the search index from the Store Management recipe payload.
+  ///
+  /// Recipe Guide must not maintain a second catalog/recipe source, so
+  /// search deliberately reads the same locally cached Store payload used
+  /// by RecipeRepository.
   Future<List<SearchResult>> _buildSearchIndex() async {
     final results = <SearchResult>[];
+    final payload = await const LocalRecipeCache().read();
+    final recipes = payload?['recipes'];
 
-    final paths = <String>{};
+    if (recipes is! List) {
+      debugPrint('SEARCH INDEX: no synced Store recipe catalog available.');
+      return const [];
+    }
 
-    for (final category in MenuRepository.categories) {
-      for (final group in category.groups) {
-        for (final item in group.items) {
-          // Prevent duplicate recipe entries
-          // when the same recipe appears in
-          // multiple menu locations.
-          if (!paths.add(item.recipePath)) {
-            continue;
-          }
+    final seenIds = <String>{};
 
-          try {
-            final recipe = await RecipeRepository.loadRecipe(item.recipePath);
+    for (final raw in recipes) {
+      if (raw is! Map) continue;
 
-            final ingredientNames = recipe.sizes
-                .expand((size) => size.ingredients)
-                .map((ingredient) => ingredient.name)
-                .where((name) => name.isNotEmpty)
-                .toSet()
-                .toList(growable: false);
+      final recipe = Map<String, dynamic>.from(raw);
+      final recipeId = recipe['id']?.toString().trim() ?? '';
+      final title = recipe['title']?.toString().trim() ?? '';
 
-            results.add(
-              SearchResult(
-                item: item,
-                category: category.title,
-                group: group.title,
-                ingredientNames: ingredientNames,
-              ),
-            );
-          } catch (error, stackTrace) {
-            // A missing or invalid recipe should
-            // not prevent the remaining menu items
-            // from being searchable.
-            //
-            // Keep the failure visible during
-            // development/testing so we can identify
-            // broken recipe assets.
+      if (recipeId.isEmpty || title.isEmpty || !seenIds.add(recipeId)) {
+        continue;
+      }
 
-            debugPrint(
-              'SEARCH INDEX ERROR: '
-              '${item.title} → '
-              '${item.recipePath}',
-            );
+      final ingredientNames = <String>{};
+      final rawSizes = recipe['sizes'];
 
-            debugPrint('ERROR: $error');
+      if (rawSizes is List) {
+        for (final rawSize in rawSizes) {
+          if (rawSize is! Map) continue;
 
-            debugPrint('$stackTrace');
+          final ingredients = rawSize['ingredients'];
+          if (ingredients is! List) continue;
+
+          for (final rawIngredient in ingredients) {
+            if (rawIngredient is! Map) continue;
+
+            final name = rawIngredient['name']?.toString().trim() ?? '';
+            if (name.isNotEmpty) {
+              ingredientNames.add(name);
+            }
           }
         }
       }
-    }
 
-    debugPrint('========================================');
+      final category = recipe['categoryId']?.toString() ?? '';
+      final group = recipe['group']?.toString() ?? '';
 
-    debugPrint('SEARCH INDEX DEBUG');
-
-    debugPrint(
-      'MENU CATEGORIES: '
-      '${MenuRepository.categories.length}',
-    );
-
-    debugPrint(
-      'INDEXED RECIPES: '
-      '${results.length}',
-    );
-
-    for (final result in results) {
-      debugPrint(
-        'INDEXED: '
-        '${result.item.title} | '
-        '${result.category} | '
-        '${result.group} | '
-        'ingredients: '
-        '${result.ingredientNames.join(', ')}',
+      results.add(
+        SearchResult(
+          item: MenuItem(
+            id: recipe['productId']?.toString() ?? recipeId,
+            title: title,
+            recipePath: recipeId,
+            imagePath: recipe['image']?.toString(),
+          ),
+          category: category,
+          group: group,
+          ingredientNames: ingredientNames.toList(growable: false),
+        ),
       );
     }
 
+    debugPrint('========================================');
+    debugPrint('SEARCH INDEX DEBUG');
+    debugPrint('STORE RECIPES: ${recipes.length}');
+    debugPrint('INDEXED RECIPES: ${results.length}');
     debugPrint('========================================');
 
     return List.unmodifiable(results);

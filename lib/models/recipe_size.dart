@@ -3,11 +3,13 @@ import 'ingredient.dart';
 class RecipeSize {
   final String size;
   final List<Ingredient> ingredients;
+  final List<String> steps;
 
-  const RecipeSize({required this.size, required this.ingredients});
+  const RecipeSize({required this.size, required this.ingredients, this.steps = const []});
 
   factory RecipeSize.fromJson(String size, Map<String, dynamic> json) {
     final ingredientsJson = json['ingredients'] as List<dynamic>? ?? [];
+    final stepsJson = json['steps'] as List<dynamic>? ?? [];
 
     return RecipeSize(
       size: size,
@@ -18,6 +20,7 @@ class RecipeSize {
             ),
           )
           .toList(),
+      steps: stepsJson.map((e) => e.toString()).toList(),
     );
   }
 
@@ -25,6 +28,7 @@ class RecipeSize {
     return {
       'size': size,
       'ingredients': ingredients.map((e) => e.toJson()).toList(),
+      'steps': steps,
     };
   }
 }

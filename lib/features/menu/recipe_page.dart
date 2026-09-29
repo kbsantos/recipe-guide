@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:bigger_brew_barista/core/utils/quantity_formatter.dart';
 import 'package:flutter/services.dart';
 
 import 'package:bigger_brew_barista/models/recipe.dart';
@@ -13,7 +14,6 @@ import 'package:bigger_brew_barista/shared/widgets/layout/app_loading.dart';
 import 'package:bigger_brew_barista/shared/widgets/layout/empty_state.dart';
 
 import '../barista/barista_mode_page.dart';
-import '../recipe_editor/recipe_editor_page.dart';
 
 class RecipePage extends StatefulWidget {
   final String recipePath;
@@ -75,54 +75,11 @@ class _RecipePageState extends State<RecipePage> {
   }
 
   // ==========================================================
-  // EDIT RECIPE
-  // ==========================================================
-
-  Future<void> _openEditor(Recipe recipe) async {
-    final selectedSizeName = _selectedSize?.size;
-
-    final updatedRecipe = await Navigator.of(context).push<Recipe>(
-      MaterialPageRoute(
-        builder: (_) =>
-            RecipeEditorPage(recipe: recipe, recipePath: widget.recipePath),
-      ),
-    );
-
-    if (!mounted) {
-      return;
-    }
-
-    setState(() {
-      _recipeFuture = RecipeRepository.loadRecipe(widget.recipePath);
-    });
-
-    if (updatedRecipe != null && selectedSizeName != null) {
-      final matchingSizes = updatedRecipe.sizes.where(
-        (size) => size.size == selectedSizeName,
-      );
-
-      if (matchingSizes.isNotEmpty) {
-        setState(() {
-          _selectedSize = matchingSizes.first;
-        });
-
-        return;
-      }
-    }
-
-    if (updatedRecipe != null && updatedRecipe.sizes.isNotEmpty) {
-      setState(() {
-        _selectedSize = updatedRecipe.sizes.first;
-      });
-    }
-  }
-
-  // ==========================================================
   // BARISTA MODE
   // ==========================================================
 
   void _startBaristaMode(Recipe recipe) {
-    if (recipe.steps.isEmpty || _selectedSize == null) {
+    if (_selectedSize == null || (_selectedSize!.steps.isEmpty && recipe.steps.isEmpty)) {
       return;
     }
 
@@ -135,7 +92,7 @@ class _RecipePageState extends State<RecipePage> {
           // The current BaristaModePage requires the selected size.
           size: _selectedSize!,
 
-          steps: recipe.steps,
+          steps: _selectedSize!.steps.isNotEmpty ? _selectedSize!.steps : recipe.steps,
         ),
       ),
     );
@@ -461,7 +418,7 @@ class _RecipePageState extends State<RecipePage> {
           child: _summaryMetric(
             context,
             icon: Icons.format_list_numbered,
-            value: '${recipe.steps.length}',
+            value: '${selectedSize.steps.isNotEmpty ? selectedSize.steps.length : recipe.steps.length}',
             label: 'Steps',
           ),
         ),
@@ -644,7 +601,7 @@ class _RecipePageState extends State<RecipePage> {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
 
-    final amount = ingredient.amount.toString().trim();
+    final amount = formatRecipeAmount(ingredient.amount.toString());
     final unit = ingredient.unit.toString().trim();
 
     final quantity = [
@@ -703,13 +660,16 @@ class _RecipePageState extends State<RecipePage> {
 
         const SizedBox(height: 14),
 
-        if (recipe.steps.isEmpty)
+        if ((_selectedSize?.steps.isEmpty ?? true) && recipe.steps.isEmpty)
           const EmptyState(
             title: 'No preparation steps available.',
             icon: Icons.receipt_long_outlined,
           )
         else
-          _buildPreparationTimeline(context, recipe.steps),
+          _buildPreparationTimeline(
+            context,
+            _selectedSize?.steps.isNotEmpty == true ? _selectedSize!.steps : recipe.steps,
+          ),
       ],
     );
   }
@@ -926,7 +886,7 @@ class _RecipePageState extends State<RecipePage> {
               _topActionButton(
                 icon: Icons.play_arrow_rounded,
                 tooltip: 'Start Preparation',
-                onPressed: recipe.steps.isEmpty
+                onPressed: ((_selectedSize?.steps.isEmpty ?? true) && recipe.steps.isEmpty)
                     ? null
                     : () => _startBaristaMode(recipe),
               ),
@@ -949,11 +909,6 @@ class _RecipePageState extends State<RecipePage> {
               ),
 
               // EDIT RECIPE
-              _topActionButton(
-                icon: Icons.edit_outlined,
-                tooltip: 'Edit Recipe',
-                onPressed: () => _openEditor(recipe),
-              ),
 
               const SizedBox(width: 8),
             ],

@@ -1,4 +1,5 @@
 import 'package:bigger_brew_barista/core/config/ingredient_config.dart';
+import 'package:bigger_brew_barista/core/utils/quantity_formatter.dart';
 import 'package:bigger_brew_barista/models/ingredient.dart';
 import 'package:bigger_brew_barista/shared/widgets/layout/app_card.dart';
 import 'package:flutter/material.dart';
@@ -10,8 +11,9 @@ class IngredientTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final amount = formatRecipeAmount(ingredient.amount);
     final quantity = [
-      ingredient.amount,
+      amount,
       ingredient.unit,
     ].where((value) => value.isNotEmpty).join(' ');
 

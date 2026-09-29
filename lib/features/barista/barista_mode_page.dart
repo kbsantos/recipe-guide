@@ -1,5 +1,6 @@
 import 'package:bigger_brew_barista/models/recipe_size.dart';
 import 'package:flutter/material.dart';
+import 'package:bigger_brew_barista/core/utils/quantity_formatter.dart';
 
 class BaristaModePage extends StatefulWidget {
   final String recipeTitle;
@@ -188,7 +189,7 @@ class _BaristaModePageState extends State<BaristaModePage> {
       );
     }
 
-    final amount = ingredient.amount.trim();
+    final amount = formatRecipeAmount(ingredient.amount);
     final unit = ingredient.unit.trim();
 
     String amountText;
