@@ -1,87 +1,164 @@
+# ============================================================
 # Flutter / Dart
+# ============================================================
+
 .dart_tool/
-.packages
-.pub/
-.pub-cache/
-build/
 .flutter-plugins
 .flutter-plugins-dependencies
-.metadata
+.packages
+.pub-cache/
+.pub/
+build/
 
-# Android
-android/.gradle/
-android/local.properties
-android/key.properties
-android/app/debug/
-android/app/profile/
-android/app/release/
-*.keystore
-*.jks
-
-# iOS / macOS
-ios/Pods/
-ios/.symlinks/
-ios/Flutter/ephemeral/
-ios/Flutter/Generated.xcconfig
-ios/Flutter/flutter_export_environment.sh
-macos/Pods/
-macos/.symlinks/
-macos/Flutter/ephemeral/
-macos/Flutter/Generated.xcconfig
-macos/Flutter/flutter_export_environment.sh
-
-# Xcode
-**/xcuserdata/
-**/*.xcuserdatad/
-**/*.xcuserstate/
-DerivedData/
-
-# VS Code
-.vscode/
-!.vscode/settings.json
-!.vscode/launch.json
-!.vscode/tasks.json
-
-# IntelliJ / Android Studio
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# Operating system
-.DS_Store
-Thumbs.db
-
-# Logs / temporary files
-*.log
-*.tmp
-*.temp
-*.bak
-*.swp
-*.swo
-
-# Environment / secrets
-.env
-.env.*
-!.env.example
+# Generated plugin registrants / metadata
+.flutter-plugins-dependencies
 
 # Coverage
 coverage/
 
+
+# ============================================================
+# IDE / Editors
+# ============================================================
+
+.idea/
+.vscode/
+
+# VS Code workspace files
+*.code-workspace
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+
+
+# ============================================================
+# macOS
+# ============================================================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folder attributes
+._*
+
+
+# ============================================================
+# Android
+# ============================================================
+
+android/.gradle/
+android/local.properties
+android/key.properties
+
+# Android generated files
+android/app/debug/
+android/app/profile/
+android/app/release/
+
+# Signing / keystore files
+*.jks
+*.keystore
+
+
+# ============================================================
+# iOS
+# ============================================================
+
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/ephemeral/
+ios/Flutter/.last_build_id
+
+# Xcode generated files
+ios/Runner.xcworkspace/xcuserdata/
+ios/Runner.xcodeproj/xcuserdata/
+ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Xcode user settings
+*.xcuserstate
+
+
+# ============================================================
+# Web
+# ============================================================
+
+web/.dart_tool/
+web/build/
+
+
+# ============================================================
+# Environment / Secrets
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+# Local configuration
+*.local
+
+# Supabase local environment
+supabase/.env
+
+
+# ============================================================
+# Logs / Temporary files
+# ============================================================
+
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*~
+
+# Crash / diagnostic files
+crashlytics/
+
+
+# ============================================================
 # Generated files
+# ============================================================
+
 *.g.dart
 *.freezed.dart
 
-# Firebase / local service configuration
-google-services.json
-GoogleService-Info.plist
+# Generated JSON / temporary exports
+*.generated.json
 
-# Archives / local exports
-*.zip
-*.tar
-*.tar.gz
+
+# ============================================================
+# Local Recipe Guide data
+# ============================================================
+
+# Local development cache
+recipe_cache/
+local_cache/
 
 # Local backups
-backup/
 backups/
+exports/
 
+# Do not commit local recipe exports
+recipe_export*.json
+recipe_backup*.json
+
+
+# ============================================================
+# Test artifacts
+# ============================================================
+
+test/.dart_tool/
+test/tmp/
+test/fixtures/generated/
+
+
+# ============================================================
+# Flutter build artifacts
+# ============================================================
+
+.flutter/
