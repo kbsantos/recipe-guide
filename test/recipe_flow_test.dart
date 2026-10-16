@@ -5,8 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'test_recipe_catalog.dart';
 
-import 'package:my_shop_recipe_guide/app.dart';
-import 'package:my_shop_recipe_guide/features/home/home_page.dart';
+import 'package:recipe_guide/app.dart';
+import 'package:recipe_guide/features/home/home_page.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

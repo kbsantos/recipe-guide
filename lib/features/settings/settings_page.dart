@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:my_shop_recipe_guide/core/config/app_settings.dart';
-import 'package:my_shop_recipe_guide/core/navigation/app_router.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/base_page.dart';
-import 'package:my_shop_recipe_guide/core/auth/recipe_guide_auth.dart';
-import 'package:my_shop_recipe_guide/core/auth/local_pin_service.dart';
-import 'package:my_shop_recipe_guide/services/local_recipe_cache.dart';
+import 'package:recipe_guide/core/config/app_settings.dart';
+import 'package:recipe_guide/core/navigation/app_router.dart';
+import 'package:recipe_guide/shared/widgets/base_page.dart';
+import 'package:recipe_guide/core/auth/recipe_guide_auth.dart';
+import 'package:recipe_guide/core/auth/local_pin_service.dart';
+import 'package:recipe_guide/services/local_recipe_cache.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -137,8 +137,7 @@ class _SettingsPageState extends State<SettingsPage> {
     final currentPin = _currentPinController.text;
     final newPin = _newPinController.text;
     final confirmPin = _confirmPinController.text;
-    final currentPinIsValid =
-        await const LocalPinService().verify(currentPin);
+    final currentPinIsValid = await const LocalPinService().verify(currentPin);
     if (!mounted) return;
     if (!currentPinIsValid) {
       ScaffoldMessenger.of(context).showSnackBar(

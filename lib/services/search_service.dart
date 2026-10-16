@@ -1,6 +1,6 @@
-import 'package:my_shop_recipe_guide/models/menu_item.dart';
-import 'package:my_shop_recipe_guide/models/search_result.dart';
-import 'package:my_shop_recipe_guide/services/local_recipe_cache.dart';
+import 'package:recipe_guide/models/menu_item.dart';
+import 'package:recipe_guide/models/search_result.dart';
+import 'package:recipe_guide/services/local_recipe_cache.dart';
 import 'package:flutter/foundation.dart';
 
 class SearchService {

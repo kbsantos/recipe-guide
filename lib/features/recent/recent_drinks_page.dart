@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:my_shop_recipe_guide/core/navigation/app_router.dart';
-import 'package:my_shop_recipe_guide/features/menu/recipe_page.dart';
-import 'package:my_shop_recipe_guide/models/menu_item.dart';
-import 'package:my_shop_recipe_guide/repositories/menu_repository.dart';
-import 'package:my_shop_recipe_guide/services/recent_service.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/base_page.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/menu/drink_card.dart';
+import 'package:recipe_guide/core/navigation/app_router.dart';
+import 'package:recipe_guide/features/menu/recipe_page.dart';
+import 'package:recipe_guide/models/menu_item.dart';
+import 'package:recipe_guide/repositories/menu_repository.dart';
+import 'package:recipe_guide/services/recent_service.dart';
+import 'package:recipe_guide/shared/widgets/base_page.dart';
+import 'package:recipe_guide/shared/widgets/menu/drink_card.dart';
 
 class RecentDrinksPage extends StatefulWidget {
   const RecentDrinksPage({super.key, this.recentService});

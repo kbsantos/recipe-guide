@@ -1,7 +1,7 @@
-import 'package:my_shop_recipe_guide/core/config/ingredient_config.dart';
-import 'package:my_shop_recipe_guide/core/utils/quantity_formatter.dart';
-import 'package:my_shop_recipe_guide/models/ingredient.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/layout/app_card.dart';
+import 'package:recipe_guide/core/config/ingredient_config.dart';
+import 'package:recipe_guide/core/utils/quantity_formatter.dart';
+import 'package:recipe_guide/models/ingredient.dart';
+import 'package:recipe_guide/shared/widgets/layout/app_card.dart';
 import 'package:flutter/material.dart';
 
 class IngredientTile extends StatelessWidget {

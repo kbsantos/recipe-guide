@@ -1,4 +1,4 @@
-import 'package:my_shop_recipe_guide/services/recent_service.dart';
+import 'package:recipe_guide/services/recent_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class _MemoryRecentStorage implements RecentStorage {

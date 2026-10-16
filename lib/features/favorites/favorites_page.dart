@@ -1,12 +1,12 @@
-import 'package:my_shop_recipe_guide/core/navigation/app_router.dart';
-import 'package:my_shop_recipe_guide/features/menu/recipe_page.dart';
-import 'package:my_shop_recipe_guide/models/menu_item.dart';
-import 'package:my_shop_recipe_guide/repositories/menu_repository.dart';
-import 'package:my_shop_recipe_guide/services/favorite_service.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/base_page.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/layout/app_loading.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/layout/empty_state.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/menu/drink_card.dart';
+import 'package:recipe_guide/core/navigation/app_router.dart';
+import 'package:recipe_guide/features/menu/recipe_page.dart';
+import 'package:recipe_guide/models/menu_item.dart';
+import 'package:recipe_guide/repositories/menu_repository.dart';
+import 'package:recipe_guide/services/favorite_service.dart';
+import 'package:recipe_guide/shared/widgets/base_page.dart';
+import 'package:recipe_guide/shared/widgets/layout/app_loading.dart';
+import 'package:recipe_guide/shared/widgets/layout/empty_state.dart';
+import 'package:recipe_guide/shared/widgets/menu/drink_card.dart';
 import 'package:flutter/material.dart';
 
 class FavoritesPage extends StatefulWidget {

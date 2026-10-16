@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:my_shop_recipe_guide/core/utils/quantity_formatter.dart';
-import 'package:my_shop_recipe_guide/models/recipe.dart';
-import 'package:my_shop_recipe_guide/models/recipe_size.dart';
-import 'package:my_shop_recipe_guide/repositories/recipe_repository.dart';
-import 'package:my_shop_recipe_guide/services/favorite_service.dart';
-import 'package:my_shop_recipe_guide/services/recent_service.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/base_page.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/layout/app_loading.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/layout/empty_state.dart';
+import 'package:recipe_guide/core/utils/quantity_formatter.dart';
+import 'package:recipe_guide/models/recipe.dart';
+import 'package:recipe_guide/models/recipe_size.dart';
+import 'package:recipe_guide/repositories/recipe_repository.dart';
+import 'package:recipe_guide/services/favorite_service.dart';
+import 'package:recipe_guide/services/recent_service.dart';
+import 'package:recipe_guide/shared/widgets/base_page.dart';
+import 'package:recipe_guide/shared/widgets/layout/app_loading.dart';
+import 'package:recipe_guide/shared/widgets/layout/empty_state.dart';
 
 class RecipePage extends StatefulWidget {
   final String recipePath;

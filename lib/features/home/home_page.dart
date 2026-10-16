@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'package:my_shop_recipe_guide/core/config/app_settings.dart';
-import 'package:my_shop_recipe_guide/core/navigation/app_router.dart';
+import 'package:recipe_guide/core/config/app_settings.dart';
+import 'package:recipe_guide/core/navigation/app_router.dart';
 
-import 'package:my_shop_recipe_guide/features/favorites/favorites_page.dart';
-import 'package:my_shop_recipe_guide/features/menu/product_list_page.dart';
-import 'package:my_shop_recipe_guide/features/settings/settings_page.dart';
+import 'package:recipe_guide/features/favorites/favorites_page.dart';
+import 'package:recipe_guide/features/menu/product_list_page.dart';
+import 'package:recipe_guide/features/settings/settings_page.dart';
 
-import 'package:my_shop_recipe_guide/services/store_recipe_sync_service.dart';
+import 'package:recipe_guide/services/store_recipe_sync_service.dart';
 
-import 'package:my_shop_recipe_guide/shared/widgets/base_page.dart';
-import 'package:my_shop_recipe_guide/services/store_display_catalog.dart';
+import 'package:recipe_guide/shared/widgets/base_page.dart';
+import 'package:recipe_guide/services/store_display_catalog.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, this.onLogout});

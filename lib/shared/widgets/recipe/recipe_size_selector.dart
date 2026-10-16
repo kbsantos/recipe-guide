@@ -1,4 +1,4 @@
-import 'package:my_shop_recipe_guide/models/recipe_size.dart';
+import 'package:recipe_guide/models/recipe_size.dart';
 import 'package:flutter/material.dart';
 
 class RecipeSizeSelector extends StatelessWidget {

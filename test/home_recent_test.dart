@@ -1,4 +1,4 @@
-import 'package:my_shop_recipe_guide/features/home/home_page.dart';
+import 'package:recipe_guide/features/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

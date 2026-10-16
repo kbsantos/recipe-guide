@@ -1,11 +1,11 @@
-import 'package:my_shop_recipe_guide/core/navigation/app_router.dart';
-import 'package:my_shop_recipe_guide/features/menu/recipe_page.dart';
-import 'package:my_shop_recipe_guide/models/search_result.dart';
-import 'package:my_shop_recipe_guide/services/search_service.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/base_page.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/layout/app_loading.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/layout/empty_state.dart';
-import 'package:my_shop_recipe_guide/shared/widgets/menu/drink_card.dart';
+import 'package:recipe_guide/core/navigation/app_router.dart';
+import 'package:recipe_guide/features/menu/recipe_page.dart';
+import 'package:recipe_guide/models/search_result.dart';
+import 'package:recipe_guide/services/search_service.dart';
+import 'package:recipe_guide/shared/widgets/base_page.dart';
+import 'package:recipe_guide/shared/widgets/layout/app_loading.dart';
+import 'package:recipe_guide/shared/widgets/layout/empty_state.dart';
+import 'package:recipe_guide/shared/widgets/menu/drink_card.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:my_shop_recipe_guide/models/recipe.dart';
+import 'package:recipe_guide/models/recipe.dart';
 
 class RecipeHeader extends StatelessWidget {
   final Recipe recipe;
