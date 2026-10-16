@@ -1,19 +1,13 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:bigger_brew_barista/core/utils/quantity_formatter.dart';
-import 'package:flutter/services.dart';
-
-import 'package:bigger_brew_barista/models/recipe.dart';
-import 'package:bigger_brew_barista/models/recipe_size.dart';
-import 'package:bigger_brew_barista/repositories/recipe_repository.dart';
-import 'package:bigger_brew_barista/services/favorite_service.dart';
-import 'package:bigger_brew_barista/services/recent_service.dart';
-import 'package:bigger_brew_barista/shared/widgets/base_page.dart';
-import 'package:bigger_brew_barista/shared/widgets/layout/app_loading.dart';
-import 'package:bigger_brew_barista/shared/widgets/layout/empty_state.dart';
-
-import '../barista/barista_mode_page.dart';
+import 'package:my_shop_recipe_guide/core/utils/quantity_formatter.dart';
+import 'package:my_shop_recipe_guide/models/recipe.dart';
+import 'package:my_shop_recipe_guide/models/recipe_size.dart';
+import 'package:my_shop_recipe_guide/repositories/recipe_repository.dart';
+import 'package:my_shop_recipe_guide/services/favorite_service.dart';
+import 'package:my_shop_recipe_guide/services/recent_service.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/base_page.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/layout/app_loading.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/layout/empty_state.dart';
 
 class RecipePage extends StatefulWidget {
   final String recipePath;
@@ -72,51 +66,6 @@ class _RecipePageState extends State<RecipePage> {
 
   void _toggleFavorite() {
     _favoriteService.toggle(widget.recipePath);
-  }
-
-  // ==========================================================
-  // BARISTA MODE
-  // ==========================================================
-
-  void _startBaristaMode(Recipe recipe) {
-    if (_selectedSize == null || (_selectedSize!.steps.isEmpty && recipe.steps.isEmpty)) {
-      return;
-    }
-
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) => BaristaModePage(
-          recipeTitle: recipe.title,
-
-          // IMPORTANT:
-          // The current BaristaModePage requires the selected size.
-          size: _selectedSize!,
-
-          steps: _selectedSize!.steps.isNotEmpty ? _selectedSize!.steps : recipe.steps,
-        ),
-      ),
-    );
-  }
-
-  // ==========================================================
-  // COPY RECIPE
-  // ==========================================================
-
-  Future<void> _copyRecipe(Recipe recipe) async {
-    final json = const JsonEncoder.withIndent('  ').convert(recipe.toJson());
-
-    await Clipboard.setData(ClipboardData(text: json));
-
-    if (!mounted) {
-      return;
-    }
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Recipe copied to clipboard'),
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
   }
 
   // ==========================================================
@@ -418,7 +367,8 @@ class _RecipePageState extends State<RecipePage> {
           child: _summaryMetric(
             context,
             icon: Icons.format_list_numbered,
-            value: '${selectedSize.steps.isNotEmpty ? selectedSize.steps.length : recipe.steps.length}',
+            value:
+                '${selectedSize.steps.isNotEmpty ? selectedSize.steps.length : recipe.steps.length}',
             label: 'Steps',
           ),
         ),
@@ -471,7 +421,6 @@ class _RecipePageState extends State<RecipePage> {
   // ==========================================================
 
   Widget _buildCupSizeSection(BuildContext context, Recipe recipe) {
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -668,7 +617,9 @@ class _RecipePageState extends State<RecipePage> {
         else
           _buildPreparationTimeline(
             context,
-            _selectedSize?.steps.isNotEmpty == true ? _selectedSize!.steps : recipe.steps,
+            _selectedSize?.steps.isNotEmpty == true
+                ? _selectedSize!.steps
+                : recipe.steps,
           ),
       ],
     );
@@ -878,20 +829,8 @@ class _RecipePageState extends State<RecipePage> {
             title: const Text('Recipe'),
             centerTitle: false,
 
-            // ==================================================
-            // TOP-RIGHT ICON ACTIONS
-            // ==================================================
+            // Keep only the favorite action in the recipe toolbar.
             actions: [
-              // START PREPARATION
-              _topActionButton(
-                icon: Icons.play_arrow_rounded,
-                tooltip: 'Start Preparation',
-                onPressed: ((_selectedSize?.steps.isEmpty ?? true) && recipe.steps.isEmpty)
-                    ? null
-                    : () => _startBaristaMode(recipe),
-              ),
-
-              // FAVORITE
               _topActionButton(
                 icon: isFavorite
                     ? Icons.favorite
@@ -900,16 +839,6 @@ class _RecipePageState extends State<RecipePage> {
                 active: isFavorite,
                 onPressed: _toggleFavorite,
               ),
-
-              // COPY RECIPE
-              _topActionButton(
-                icon: Icons.content_copy_outlined,
-                tooltip: 'Copy Recipe',
-                onPressed: () => _copyRecipe(recipe),
-              ),
-
-              // EDIT RECIPE
-
               const SizedBox(width: 8),
             ],
           ),

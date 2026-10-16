@@ -5,33 +5,24 @@ class AppSettings {
   final String title;
   final String subtitle;
   final String storeName;
-  final bool autoSync;
 
   const AppSettings({
     required this.title,
     required this.subtitle,
     required this.storeName,
-    required this.autoSync,
   });
 
   static const defaults = AppSettings(
-    title: 'Bigger Brew',
+    title: 'Recipe Guide',
     subtitle: 'Barista Recipe Guide',
     storeName: '',
-    autoSync: true,
   );
 
-  AppSettings copyWith({
-    String? title,
-    String? subtitle,
-    String? storeName,
-    bool? autoSync,
-  }) {
+  AppSettings copyWith({String? title, String? subtitle, String? storeName}) {
     return AppSettings(
       title: title ?? this.title,
       subtitle: subtitle ?? this.subtitle,
       storeName: storeName ?? this.storeName,
-      autoSync: autoSync ?? this.autoSync,
     );
   }
 }
@@ -43,18 +34,19 @@ class AppSettingsService {
   static const _titleKey = 'settings.app_title';
   static const _subtitleKey = 'settings.app_subtitle';
   static const _storeNameKey = 'settings.store_name';
-  static const _autoSyncKey = 'settings.auto_sync';
 
-  final ValueNotifier<AppSettings> notifier =
-      ValueNotifier<AppSettings>(AppSettings.defaults);
+  final ValueNotifier<AppSettings> notifier = ValueNotifier<AppSettings>(
+    AppSettings.defaults,
+  );
 
   Future<void> load() async {
     final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('settings.auto_sync');
     notifier.value = AppSettings(
       title: prefs.getString(_titleKey) ?? AppSettings.defaults.title,
       subtitle: prefs.getString(_subtitleKey) ?? AppSettings.defaults.subtitle,
-      storeName: prefs.getString(_storeNameKey) ?? AppSettings.defaults.storeName,
-      autoSync: prefs.getBool(_autoSyncKey) ?? AppSettings.defaults.autoSync,
+      storeName:
+          prefs.getString(_storeNameKey) ?? AppSettings.defaults.storeName,
     );
   }
 
@@ -63,12 +55,12 @@ class AppSettingsService {
     await prefs.setString(_titleKey, settings.title);
     await prefs.setString(_subtitleKey, settings.subtitle);
     await prefs.setString(_storeNameKey, settings.storeName);
-    await prefs.setBool(_autoSyncKey, settings.autoSync);
+    // Remove the legacy preference. Recipe syncing is now manual only.
+    await prefs.remove('settings.auto_sync');
     notifier.value = settings;
   }
 
   Future<void> reset() => save(AppSettings.defaults);
-
 
   void dispose() => notifier.dispose();
 }

@@ -1,5 +1,5 @@
-import 'package:bigger_brew_barista/features/favorites/favorites_page.dart';
-import 'package:bigger_brew_barista/services/favorite_service.dart';
+import 'package:my_shop_recipe_guide/features/favorites/favorites_page.dart';
+import 'package:my_shop_recipe_guide/services/favorite_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

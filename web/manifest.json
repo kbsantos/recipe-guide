@@ -1,6 +1,6 @@
 {
-    "name": "bigger_brew_barista",
-    "short_name": "bigger_brew_barista",
+    "name": "my_shop_recipe_guide",
+    "short_name": "my_shop_recipe_guide",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

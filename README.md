@@ -1,4 +1,4 @@
-# Bigger Brew Barista Recipe Guide
+# Recipe Guide
 
 ## Architecture
 
@@ -15,14 +15,16 @@ The Recipe Guide is a **read-only consumer** of Store Management recipe data.
 
 ## Supabase configuration
 
-Copy `.env.example` to `.env` and provide:
+The ZIP includes a blank `.env` placeholder so the Flutter asset declaration remains valid. Add your project configuration to `.env` before running the app. The `.env.example` file lists the expected keys:
 
 ```text
 SUPABASE_URL=...
 SUPABASE_PUBLISHABLE_KEY=...
+SUPABASE_STORE_ID=...
+SUPABASE_DEVICE_ID=...
 ```
 
-The signed-in user must have a Store Management `store_id` in Supabase `app_metadata`.
+Do not put the Supabase service-role key or the Admin PIN in this file. The configured Store account must have permission to read the Store catalog.
 
 ## Store migration
 
@@ -38,8 +40,26 @@ This migration:
 - provides the Store recipe management read/write functions;
 - provides `get_recipe_guide_catalog()` for the read-only Recipe Guide.
 
-## Offline behavior
+## Offline behavior and manual sync
 
-After a successful sync, the latest Store payload is cached locally. If the Store endpoint is temporarily unavailable, the Recipe Guide opens from that cache.
+- The first PIN verification requires internet access.
+- After a successful PIN unlock and a successful recipe sync, the app saves the catalog locally and can reopen from that cache while offline.
+- Recipe sync is manual only: use the Sync icon on the home screen. There is no automatic sync on app startup or PIN unlock.
+- Syncing requires internet access and an active Store session. If sync fails, the last cached catalog remains available.
+- A fresh installation with no cached catalog must connect, unlock, and sync once before recipes are available offline.
 
-A new installation without a successful first sync cannot display recipes because there is no bundled recipe source.
+## Secure PIN login
+
+The Recipe Guide PIN is verified server-side by the `recipe-guide-pin-login` Supabase Edge Function. The PIN is **not** compiled into the Flutter client. After successful verification, the function creates a Supabase session for the configured Store account, so existing Store-side RLS and the `get_recipe_guide_catalog()` RPC remain in force. Email/password login and saved email/password settings have been removed from the app.
+
+Deploy the database migration and Edge Function from the project root:
+
+```bash
+supabase db push
+supabase functions deploy recipe-guide-pin-login
+supabase secrets set RECIPE_GUIDE_ADMIN_PIN=YOUR_4_TO_8_DIGIT_PIN RECIPE_GUIDE_ADMIN_EMAIL=store-authorized-user@example.com PIN_RATE_LIMIT_SALT=YOUR_LONG_RANDOM_SALT
+```
+
+The Edge Function also requires the project's standard `SUPABASE_URL`, `SUPABASE_ANON_KEY`, and `SUPABASE_SERVICE_ROLE_KEY` secrets. Supabase provides these in hosted Edge Functions; do not put the service-role key or PIN in `.env`, Dart code, or client build arguments. `RECIPE_GUIDE_ADMIN_EMAIL` must be an existing, confirmed Supabase user that already has permission to read the Store catalog. The function limits each hashed client IP to eight attempts per 15 minutes using `recipe_guide_pin_attempts`.
+
+PIN verification requires network access on first use. After a successful online unlock, the app stores a local unlocked marker; on later launches it can open offline only when a cached catalog also exists. This is a local convenience for offline use, not a replacement for server-side PIN verification on first unlock. Sync remains manual and requires internet access plus an active Store session.

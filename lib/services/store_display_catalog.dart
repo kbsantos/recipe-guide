@@ -14,6 +14,7 @@ class StoreDisplayProduct {
   final String? image;
   final String recipeRef;
   final int sortOrder;
+  final List<String> ingredientNames;
 
   const StoreDisplayProduct({
     required this.id,
@@ -27,6 +28,7 @@ class StoreDisplayProduct {
     required this.image,
     required this.recipeRef,
     required this.sortOrder,
+    this.ingredientNames = const [],
   });
 
   static Future<List<StoreDisplayProduct>> loadProducts() async {
@@ -66,12 +68,36 @@ class StoreDisplayProduct {
       final price = _fromPrice(map);
       final available = map['available'] != false;
       final sortOrder = _int(map['sortOrder']) ?? index;
+      final ingredientNames = <String>{};
+      final rawSizes = map['sizes'];
+      if (rawSizes is List) {
+        for (final rawSize in rawSizes) {
+          if (rawSize is! Map) continue;
+          final rawIngredients = rawSize['ingredients'];
+          if (rawIngredients is! List) continue;
+          for (final rawIngredient in rawIngredients) {
+            if (rawIngredient is! Map) continue;
+            final name = rawIngredient['name']?.toString().trim() ?? '';
+            if (name.isNotEmpty) ingredientNames.add(name);
+          }
+        }
+      }
+      final rawIngredients = map['ingredients'];
+      if (rawIngredients is List) {
+        for (final rawIngredient in rawIngredients) {
+          if (rawIngredient is! Map) continue;
+          final name = rawIngredient['name']?.toString().trim() ?? '';
+          if (name.isNotEmpty) ingredientNames.add(name);
+        }
+      }
 
       result.add(StoreDisplayProduct(
         id: id,
         title: title,
         categoryId: categoryId,
-        categoryTitle: category?['title']?.toString() ?? category?['name']?.toString() ?? categoryId,
+        categoryTitle: category?['title']?.toString() ??
+            category?['name']?.toString() ??
+            categoryId,
         categoryIcon: category?['icon']?.toString() ?? '',
         groupTitle: map['group']?.toString() ?? map['groupName']?.toString() ?? '',
         price: price,
@@ -79,6 +105,7 @@ class StoreDisplayProduct {
         image: map['image']?.toString(),
         recipeRef: recipeRef,
         sortOrder: sortOrder,
+        ingredientNames: ingredientNames.toList(growable: false),
       ));
     }
 
@@ -88,6 +115,15 @@ class StoreDisplayProduct {
       return a.title.toLowerCase().compareTo(b.title.toLowerCase());
     });
     return result;
+  }
+
+  bool matchesSearchQuery(String query) {
+    final normalized = query.trim().toLowerCase();
+    if (normalized.isEmpty) return true;
+    final haystack = [title, categoryTitle, groupTitle, ...ingredientNames]
+        .join(' ')
+        .toLowerCase();
+    return haystack.contains(normalized);
   }
 
   static num? _fromPrice(Map<String, dynamic> product) {

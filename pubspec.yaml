@@ -1,5 +1,5 @@
-name: bigger_brew_barista
-description: "Bigger Brew Barista Recipe Guide"
+name: my_shop_recipe_guide
+description: "Recipe Guide"
 
 publish_to: "none"
 
@@ -22,6 +22,7 @@ dependencies:
   # Store Management recipe sync
   supabase_flutter: ^2.10.0
   flutter_dotenv: ^5.2.1
+  flutter_secure_storage: ^9.2.4
 
 dev_dependencies:
   flutter_test:

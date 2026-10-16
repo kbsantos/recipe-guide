@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="bigger_brew_barista"
+        android:label="my_shop_recipe_guide"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

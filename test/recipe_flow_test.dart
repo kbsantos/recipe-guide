@@ -5,8 +5,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'test_recipe_catalog.dart';
 
-import 'package:bigger_brew_barista/app.dart';
-import 'package:bigger_brew_barista/features/home/home_page.dart';
+import 'package:my_shop_recipe_guide/app.dart';
+import 'package:my_shop_recipe_guide/features/home/home_page.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -38,9 +38,7 @@ void main() {
       // START APP
       // ----------------------------------------------------------
 
-      await tester.pumpWidget(
-        const BiggerBrewApp(homeOverride: HomePage()),
-      );
+      await tester.pumpWidget(const RecipeGuideApp(homeOverride: HomePage()));
 
       // Allow the initial frame to render.
       await tester.pump();

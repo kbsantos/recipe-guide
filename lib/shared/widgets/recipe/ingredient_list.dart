@@ -1,5 +1,5 @@
-import 'package:bigger_brew_barista/models/ingredient.dart';
-import 'package:bigger_brew_barista/shared/widgets/layout/empty_state.dart';
+import 'package:my_shop_recipe_guide/models/ingredient.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/layout/empty_state.dart';
 import 'package:flutter/material.dart';
 
 import 'ingredient_tile.dart';

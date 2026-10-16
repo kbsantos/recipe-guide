@@ -1,0 +1,5 @@
+[functions.recipe-guide-pin-login]
+# This endpoint has no Supabase user session yet. It verifies the PIN itself,
+# applies server-side rate limiting, and only then creates an authenticated
+# session for the configured, authorized Store account.
+verify_jwt = false

@@ -86,10 +86,9 @@ class _ProductListContentState extends State<ProductListContent> {
     }
     final query = widget.searchQuery.trim().toLowerCase();
     if (query.isEmpty) return result;
-    return result.where((p) {
-      final haystack = [p.title, p.categoryTitle, p.groupTitle].join(' ').toLowerCase();
-      return haystack.contains(query);
-    }).toList(growable: false);
+    return result
+        .where((product) => product.matchesSearchQuery(query))
+        .toList(growable: false);
   }
 
   @override

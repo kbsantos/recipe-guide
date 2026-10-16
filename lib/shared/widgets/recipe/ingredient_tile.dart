@@ -1,7 +1,7 @@
-import 'package:bigger_brew_barista/core/config/ingredient_config.dart';
-import 'package:bigger_brew_barista/core/utils/quantity_formatter.dart';
-import 'package:bigger_brew_barista/models/ingredient.dart';
-import 'package:bigger_brew_barista/shared/widgets/layout/app_card.dart';
+import 'package:my_shop_recipe_guide/core/config/ingredient_config.dart';
+import 'package:my_shop_recipe_guide/core/utils/quantity_formatter.dart';
+import 'package:my_shop_recipe_guide/models/ingredient.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/layout/app_card.dart';
 import 'package:flutter/material.dart';
 
 class IngredientTile extends StatelessWidget {
@@ -25,9 +25,9 @@ class IngredientTile extends StatelessWidget {
             width: 44,
             height: 44,
             decoration: BoxDecoration(
-              color: IngredientConfig.color(ingredient.name).withValues(
-                alpha: 0.12,
-              ),
+              color: IngredientConfig.color(
+                ingredient.name,
+              ).withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Icon(

@@ -1,7 +1,7 @@
 class AppConstants {
   AppConstants._();
 
-  static const appName = 'Bigger Brew';
+  static const appName = 'Recipe Guide';
 
   static const appSubtitle = 'Barista Recipe Guide';
 

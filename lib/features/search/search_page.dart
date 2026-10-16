@@ -1,11 +1,11 @@
-import 'package:bigger_brew_barista/core/navigation/app_router.dart';
-import 'package:bigger_brew_barista/features/menu/recipe_page.dart';
-import 'package:bigger_brew_barista/models/search_result.dart';
-import 'package:bigger_brew_barista/services/search_service.dart';
-import 'package:bigger_brew_barista/shared/widgets/base_page.dart';
-import 'package:bigger_brew_barista/shared/widgets/layout/app_loading.dart';
-import 'package:bigger_brew_barista/shared/widgets/layout/empty_state.dart';
-import 'package:bigger_brew_barista/shared/widgets/menu/drink_card.dart';
+import 'package:my_shop_recipe_guide/core/navigation/app_router.dart';
+import 'package:my_shop_recipe_guide/features/menu/recipe_page.dart';
+import 'package:my_shop_recipe_guide/models/search_result.dart';
+import 'package:my_shop_recipe_guide/services/search_service.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/base_page.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/layout/app_loading.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/layout/empty_state.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/menu/drink_card.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatefulWidget {

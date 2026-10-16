@@ -21,7 +21,7 @@ Future<void> main() async {
     publishableKey: StoreConfig.publishableKey,
   );
 
-  runApp(const BiggerBrewApp());
+  runApp(const RecipeGuideApp());
 }
 
 class _ConfigurationErrorApp extends StatelessWidget {
@@ -29,16 +29,16 @@ class _ConfigurationErrorApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-        home: Scaffold(
-          body: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(24),
-              child: Text(
-                'Supabase is not configured. Add SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY to .env.',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-            ),
+    home: Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Text(
+            'Supabase is not configured. Add SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY to .env.',
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
-      );
+      ),
+    ),
+  );
 }

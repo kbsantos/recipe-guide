@@ -16,24 +16,41 @@ class KioskProductCard extends StatelessWidget {
     this.onFavorite,
   });
 
-  String _priceText() {
-    final price = product.price;
-    if (price == null) return 'RECIPE';
-    final value = price % 1 == 0 ? price.toInt().toString() : price.toStringAsFixed(2);
-    return 'FROM ₱$value';
+  Widget _categoryIcon(BuildContext context) {
+    final image = product.image?.trim() ?? '';
+    if (image.startsWith('https://') || image.startsWith('http://')) {
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: Image.network(
+          image,
+          width: 68,
+          height: 76,
+          fit: BoxFit.cover,
+          errorBuilder: (_, _, _) => _fallbackCategoryIcon(context),
+        ),
+      );
+    }
+
+    return Container(
+      width: 68,
+      height: 76,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.primaryContainer.withValues(alpha: 0.65),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      alignment: Alignment.center,
+      child: _fallbackCategoryIcon(context),
+    );
   }
 
-  Widget _categoryIcon(BuildContext context) {
-    if (product.categoryIcon.trim().isNotEmpty) {
-      final icon = product.categoryIcon.trim();
-      // Store catalog icons are allowed to be emoji/text symbols.
-      if (icon.runes.length <= 4) {
-        return Text(icon, style: const TextStyle(fontSize: 20));
-      }
+  Widget _fallbackCategoryIcon(BuildContext context) {
+    final icon = product.categoryIcon.trim();
+    if (icon.isNotEmpty && icon.runes.length <= 4) {
+      return Text(icon, style: const TextStyle(fontSize: 28));
     }
     return Icon(
       StoreDisplayProduct.fallbackIcon(product.categoryTitle),
-      size: 20,
+      size: 30,
       color: Theme.of(context).colorScheme.primary,
     );
   }
@@ -44,78 +61,102 @@ class KioskProductCard extends StatelessWidget {
     final scheme = theme.colorScheme;
 
     return Card(
-      elevation: 2,
+      elevation: 1.5,
       margin: EdgeInsets.zero,
       clipBehavior: Clip.antiAlias,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: InkWell(
         onTap: product.available ? onTap : null,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(14, 12, 10, 10),
+          padding: const EdgeInsets.all(14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  _categoryIcon(context),
-                  const SizedBox(width: 7),
-                  Expanded(
-                    child: Text(
-                      product.categoryTitle,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: theme.textTheme.bodySmall?.copyWith(
-                        color: scheme.onSurfaceVariant,
-                      ),
-                    ),
-                  ),
-                  if (onFavorite != null)
-                    IconButton(
-                      tooltip: isFavorite ? 'Remove favorite' : 'Add favorite',
-                      onPressed: onFavorite,
-                      padding: EdgeInsets.zero,
-                      constraints: const BoxConstraints.tightFor(width: 30, height: 30),
-                      icon: Icon(
-                        isFavorite ? Icons.favorite : Icons.favorite_border,
-                        size: 18,
-                        color: isFavorite ? scheme.error : scheme.onSurfaceVariant,
-                      ),
-                    ),
-                ],
-              ),
-              const SizedBox(height: 5),
               Expanded(
-                child: Text(
-                  product.title,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: theme.textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.w600,
-                  ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _categoryIcon(context),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  product.categoryTitle.toUpperCase(),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: theme.textTheme.labelSmall?.copyWith(
+                                    letterSpacing: 0.5,
+                                    fontWeight: FontWeight.w600,
+                                    color: scheme.primary,
+                                  ),
+                                ),
+                              ),
+                              if (onFavorite != null)
+                                IconButton(
+                                  tooltip: isFavorite ? 'Remove favorite' : 'Add favorite',
+                                  onPressed: onFavorite,
+                                  padding: EdgeInsets.zero,
+                                  constraints: const BoxConstraints.tightFor(
+                                    width: 32,
+                                    height: 32,
+                                  ),
+                                  icon: Icon(
+                                    isFavorite ? Icons.favorite : Icons.favorite_border,
+                                    size: 21,
+                                    color: isFavorite ? scheme.error : scheme.onSurfaceVariant,
+                                  ),
+                                ),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          Text(
+                            product.title,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.w700,
+                              height: 1.2,
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          Text(
+                            'Recipe and preparation guide',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: theme.textTheme.bodySmall?.copyWith(
+                              color: scheme.onSurfaceVariant,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 10),
+              Divider(height: 1, color: scheme.outlineVariant.withValues(alpha: 0.65)),
+              const SizedBox(height: 9),
               Row(
                 children: [
                   Expanded(
                     child: Text(
-                      _priceText(),
+                      product.available ? 'View recipe' : 'Unavailable',
                       style: theme.textTheme.labelLarge?.copyWith(
-                        fontWeight: FontWeight.w700,
-                        color: scheme.primary,
+                        fontWeight: FontWeight.w600,
+                        color: product.available ? scheme.primary : scheme.error,
                       ),
                     ),
                   ),
-                  if (!product.available)
-                    Text(
-                      'Unavailable',
-                      style: theme.textTheme.labelSmall?.copyWith(
-                        color: scheme.error,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    )
-                  else
-                    Icon(Icons.menu_book_outlined, size: 20, color: scheme.primary),
+                  Icon(
+                    product.available ? Icons.menu_book_rounded : Icons.block,
+                    size: 21,
+                    color: product.available ? scheme.primary : scheme.error,
+                  ),
                 ],
               ),
             ],

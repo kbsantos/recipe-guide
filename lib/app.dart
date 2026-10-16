@@ -4,10 +4,10 @@ import 'core/theme/app_theme.dart';
 import 'core/config/app_settings.dart';
 import 'core/auth/auth_gate.dart';
 
-class BiggerBrewApp extends StatelessWidget {
+class RecipeGuideApp extends StatelessWidget {
   /// [homeOverride] is used by widget tests to bypass authentication and
   /// exercise the application UI with a seeded local recipe catalog.
-  const BiggerBrewApp({super.key, this.homeOverride});
+  const RecipeGuideApp({super.key, this.homeOverride});
 
   final Widget? homeOverride;
 

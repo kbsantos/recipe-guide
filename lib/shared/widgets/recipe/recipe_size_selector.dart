@@ -1,4 +1,4 @@
-import 'package:bigger_brew_barista/models/recipe_size.dart';
+import 'package:my_shop_recipe_guide/models/recipe_size.dart';
 import 'package:flutter/material.dart';
 
 class RecipeSizeSelector extends StatelessWidget {

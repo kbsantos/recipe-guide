@@ -1,4 +1,4 @@
-import 'package:bigger_brew_barista/services/favorite_service.dart';
+import 'package:my_shop_recipe_guide/services/favorite_service.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class _MemoryFavoriteStorage implements FavoriteStorage {

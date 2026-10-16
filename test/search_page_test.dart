@@ -1,5 +1,5 @@
-import 'package:bigger_brew_barista/app.dart';
-import 'package:bigger_brew_barista/features/home/home_page.dart';
+import 'package:my_shop_recipe_guide/app.dart';
+import 'package:my_shop_recipe_guide/features/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -40,9 +40,7 @@ void main() {
     // Launch app
     // --------------------------------------------------------
 
-    await tester.pumpWidget(
-        const BiggerBrewApp(homeOverride: HomePage()),
-      );
+    await tester.pumpWidget(const RecipeGuideApp(homeOverride: HomePage()));
 
     await tester.pump();
 
@@ -62,7 +60,7 @@ void main() {
     await tester.tap(clearButton);
     await tester.pump();
 
-    // Clearing restores the full product list on the same page.
-    expect(find.text('61 products'), findsOneWidget);
+    // Clearing restores the complete locally cached catalog on the same page.
+    expect(find.text('1 products'), findsOneWidget);
   });
 }

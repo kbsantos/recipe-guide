@@ -1,4 +1,4 @@
-import 'package:bigger_brew_barista/shared/widgets/menu/drink_card.dart';
+import 'package:my_shop_recipe_guide/shared/widgets/menu/drink_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
